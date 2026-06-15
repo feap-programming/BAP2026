@@ -1174,9 +1174,10 @@ Partial Class FrmAddPurchaseReq
         '
         Me.lblTCID.Location = New System.Drawing.Point(485, 236)
         Me.lblTCID.Name = "lblTCID"
-        Me.lblTCID.Size = New System.Drawing.Size(55, 18)
+        Me.lblTCID.Size = New System.Drawing.Size(57, 18)
         Me.lblTCID.TabIndex = 42
-        Me.lblTCID.Text = "JAYMARK"
+        Me.lblTCID.Text = "FABRIGAR"
+        Me.lblTCID.Visible = False
         '
         'lblUID
         '

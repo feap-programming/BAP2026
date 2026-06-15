@@ -763,7 +763,20 @@ Public Class FrmAddPurchaseReq
         dt.Rows.Add(newRow)
         gvPR.DataSource = dt
         gvPR.Refresh()
+
+        currencyDGV()
+
     End Sub
+
+    Private Sub currencyDGV()
+
+
+        Dim dt = TryCast(gvPR.DataSource, DataTable)
+
+        ddCurrency.Enabled = (dt Is Nothing OrElse dt.Rows.Count = 0)
+
+    End Sub
+
 
     Private Sub LoaddInvestment()
 
@@ -916,16 +929,13 @@ Public Class FrmAddPurchaseReq
         Select Case ddclassfix.SelectedItem.Text.Trim()
 
             Case "Principal"
+                DPPLNO.Visible = False
+                lblPPNO.Visible = false
+
+            Case "Capitalized"
                 DPPLNO.Visible = True
                 lblPPNO.Visible = True
 
-            Case "Capitalized"
-                DPPLNO.Visible = False
-                lblPPNO.Visible = False
-
-            Case "N/A"
-                DPPLNO.Visible = False
-                lblPPNO.Visible = False
 
 
         End Select
@@ -1230,6 +1240,9 @@ Public Class FrmAddPurchaseReq
                     Next
 
                     gvPR.Refresh()
+
+                    currencyDGV()
+
                 End If
 
             End If
@@ -1277,6 +1290,8 @@ Public Class FrmAddPurchaseReq
             rcbModel.Checked = True
             AccountFields()
 
+            DPPLNO.Visible = False
+            lblPPNO.Visible = False
         Else
 
             If onRRB.IsChecked = True Then
@@ -1739,26 +1754,12 @@ Public Class FrmAddPurchaseReq
 
                 '-------------ITEM INSERT----------------' 
 
-                'dt.Columns.Add("SubRefNo", GetType(String))
-                'dt.Columns.Add("NO", GetType(Integer))
-                'dt.Columns.Add("ItemCode", GetType(String))
-                'dt.Columns.Add("Description", GetType(String))
-                'dt.Columns.Add("Qty", GetType(Decimal))
-                'dt.Columns.Add("Classification", GetType(String))
-                'dt.Columns.Add("Unit", GetType(String))
-                'dt.Columns.Add("UnitPrice", GetType(Decimal))
-                'dt.Columns.Add("Totalcost", GetType(Decimal))
-                'dt.Columns.Add("Unitpricejpy", GetType(Decimal))
-                'dt.Columns.Add("PEZA", GetType(String))
-                'dt.Columns.Add("fixclass", GetType(String))
-                'dt.Columns.Add("Type", GetType(String))
-
             Next
 
             '----------------INSERT INVESTMENT-------------------'
 
             InvestmentInsert(BudRefNum:=CBRefNum.Text, Transcode, MonthOrder:=dtpMO.Value, OrderDesc:=tbcDescription.Text, Classification:=ddClass.Text, OrderDepartment:=tbDept.Text,
-                                                                 _Process:=ddProcess.Text, QTY:=rsQty.Value, UOM:=ddUOM.Text, OrderStatus:="", OrderRemarks:="", Signature:=tbUser.Text,
+                                                                 _Process:=ddProcess.Text, QTY:=rsQty.Value, UOM:=ddUOM.Text, OrderStatus:=ddStatus.Text, OrderRemarks:=tbcReason.Text, Signature:=tbUser.Text,
                                                                     MO:=dtpMO.Value, DN:=dtpDN.Value, EC:=ddCurrency.Text, EOA:=rsOA.Value, EJPY:=rsEPAJPY.Value, TOPRA:=rsTOPRA.Value,
                                                                         RN:=txtRN.Text, Rate:=rsConversion.Value, MoldDie:=modCDD.Text, InvestmentNo:=cbInvestment.Text)
 
@@ -1781,12 +1782,7 @@ Public Class FrmAddPurchaseReq
 
             InsertAAM(Activity:=ddActivity.Text, Model:=modCDD.Text, Transcode)
 
-
             '---------------INSERT  ACTIVITY & MODEL  -------------------'
-
-
-
-
 
 
 
@@ -1861,5 +1857,19 @@ Public Class FrmAddPurchaseReq
 
     End Sub
 
+
+    Private Sub gvPR_ValueChanged(sender As Object, e As EventArgs) Handles gvPR.ValueChanged
+
+        If gvPR.Rows.Count > 0 Then
+
+            ddCurrency.Enabled = False
+
+        Else
+
+            ddCurrency.Enabled = True
+
+        End If
+
+    End Sub
 End Class
 

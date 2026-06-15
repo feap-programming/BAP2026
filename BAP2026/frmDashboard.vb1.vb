@@ -236,6 +236,14 @@ Public Class FrmDashboard_vb1
                 frmaddPR.SelectedDept = frmhome.SelectedDept
 
                 LoadingForm(frmaddPR)
+
+
+            Case "nodeCreateOrder"
+
+                Dim frmaddPO As New FrmAddPO
+                frmaddPO.SelectedDept = frmhome.SelectedDept
+
+                LoadingForm(frmaddPO)
         End Select
 
 
