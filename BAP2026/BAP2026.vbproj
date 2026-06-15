@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2D4B8B69-97B7-4A34-9202-F721FA8E54D0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>BAP2026.My.MyApplication</StartupObject>
+    <RootNamespace>BAP2026</RootNamespace>
+    <AssemblyName>BAP2026</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>BAP2026.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>BAP2026.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Telerik.WinControls, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.GridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadDock, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.RadDock.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Breeze, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.Breeze.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Crystal, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.Crystal.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.CrystalDark, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.CrystalDark.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Desert, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.Desert.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.FluentDark, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.FluentDark.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Material, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.Material.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.MaterialBlueGrey, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.MaterialBlueGrey.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.MaterialTeal, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.MaterialTeal.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2019, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.Office2019.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroBlue, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.TelerikMetroBlue.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroTouch, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.TelerikMetroTouch.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2022, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.VisualStudio2022.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Windows11, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.Windows11.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2025.4.1111.462\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FontAwesome.Sharp">
+      <Version>6.6.0</Version>
+    </PackageReference>
+    <PackageReference Include="MySql.Data">
+      <Version>9.6.0</Version>
+    </PackageReference>
+    <PackageReference Include="Telerik.Licensing">
+      <Version>1.8.2</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\GeneralQueries\cAddConversion.vb" />
+    <Compile Include="Controller\GeneralQueries\cDeleteMajorRef.vb" />
+    <Compile Include="Controller\GeneralQueries\cGenerateConversion.vb" />
+    <Compile Include="Controller\GeneralQueries\cGenerateSubRefNo.vb" />
+    <Compile Include="Controller\GeneralQueries\cGenerateTCID.vb" />
+    <Compile Include="Controller\GeneralQueries\cGetSummaryTM.vb" />
+    <Compile Include="Controller\GeneralQueries\cGetTJPY.vb" />
+    <Compile Include="Controller\GeneralQueries\cGetUID.vb" />
+    <Compile Include="Controller\GeneralQueries\cInsertActivityModelByPR.Designer.vb">
+      <DependentUpon>cInsertActivityModelByPR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\GeneralQueries\cInsertActivityModelByPR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\GeneralQueries\cInsertAddRec.vb" />
+    <Compile Include="Controller\GeneralQueries\cInsertInvestmentPR.vb" />
+    <Compile Include="Controller\GeneralQueries\cInsertMajorRef.vb" />
+    <Compile Include="Controller\GeneralQueries\cInsertMPR.vb" />
+    <Compile Include="Controller\GeneralQueries\cInsertPRITEMSvb.vb" />
+    <Compile Include="Controller\GeneralQueries\cInsertPRRecord.vb" />
+    <Compile Include="Controller\GeneralQueries\cInsertRemainingBudgetHistory.Designer.vb">
+      <DependentUpon>cInsertRemainingBudgetHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\GeneralQueries\cInsertRemainingBudgetHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\GeneralQueries\cSelectAllActivityPR.vb" />
+    <Compile Include="Controller\GeneralQueries\cSelectConversion.vb" />
+    <Compile Include="Controller\GeneralQueries\cSelectFAC.vb" />
+    <Compile Include="Controller\GeneralQueries\cSelectMajorDescPR.vb" />
+    <Compile Include="Controller\GeneralQueries\cSelectMajorPR.vb" />
+    <Compile Include="Controller\GeneralQueries\cSelectMajorRefByClass.vb" />
+    <Compile Include="Controller\GeneralQueries\cSelectAllDesc.vb" />
+    <Compile Include="Controller\GeneralQueries\cSelectAllProcess.vb" />
+    <Compile Include="Controller\GeneralQueries\cSelectModels.vb" />
+    <Compile Include="Controller\GeneralQueries\cSelectYear.vb" />
+    <Compile Include="Controller\GeneralQueries\cUpdateMajorBudget.vb" />
+    <Compile Include="Controller\SAP\cSelectCurrency.vb" />
+    <Compile Include="Controller\SAP\cSelectInvestment.vb" />
+    <Compile Include="Controller\SAP\cSelectItemCode.vb" />
+    <Compile Include="Controller\SAP\cSelectUOM.vb" />
+    <Compile Include="Controller\Users\cDeleteUser.vb" />
+    <Compile Include="Controller\Users\cInsertUsers.vb" />
+    <Compile Include="Controller\GeneralQueries\cSelect.vb" />
+    <Compile Include="Controller\Users\cselectUsers.vb" />
+    <Compile Include="Controller\Users\cUpdateUser.vb" />
+    <Compile Include="Databases\cHrmsDb.vb" />
+    <Compile Include="Databases\cMainDb.vb" />
+    <Compile Include="Databases\cSapDb.vb" />
+    <Compile Include="frmAddMajorRef.Designer.vb">
+      <DependentUpon>frmAddMajorRef.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddMajorRef.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddMajorRec.Designer.vb">
+      <DependentUpon>FrmAddMajorRec.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddMajorRec.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddPurchaseReq.Designer.vb">
+      <DependentUpon>frmAddPurchaseReq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddPurchaseReq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateBudget.Designer.vb">
+      <DependentUpon>frmCreateBudget.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateBudget.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConversion.Designer.vb">
+      <DependentUpon>frmConversion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConversion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboard.vb1.Designer.vb">
+      <DependentUpon>frmDashboard.vb1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashboard.vb1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHome.Designer.vb">
+      <DependentUpon>frmHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\GeneralQueries\cSelectAllMajorBudget.vb" />
+    <Compile Include="GridViews\cGvAllMajorRef.vb" />
+    <Compile Include="UI\cHomeUI.vb" />
+    <Compile Include="UI\cOpenChildForm.vb" />
+    <Compile Include="UI\cPurchaseReqUI.vb" />
+    <EmbeddedResource Include="Controller\GeneralQueries\cInsertActivityModelByPR.resx">
+      <DependentUpon>cInsertActivityModelByPR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\GeneralQueries\cInsertRemainingBudgetHistory.resx">
+      <DependentUpon>cInsertRemainingBudgetHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddMajorRef.resx">
+      <DependentUpon>frmAddMajorRef.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddMajorRec.resx">
+      <DependentUpon>FrmAddMajorRec.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddPurchaseReq.resx">
+      <DependentUpon>frmAddPurchaseReq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConversion.resx">
+      <DependentUpon>frmConversion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateBudget.resx">
+      <DependentUpon>frmCreateBudget.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboard.vb1.resx">
+      <DependentUpon>frmDashboard.vb1.vb</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewPR.Designer.vb">
+      <DependentUpon>frmNewPR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewPR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegister.Designer.vb">
+      <DependentUpon>FrmRegister.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegister.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlobalVariables.vb" />
+    <Compile Include="GridViews\cGvAllEmployees.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewPR.resx">
+      <DependentUpon>frmNewPR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegister.resx">
+      <DependentUpon>FrmRegister.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\budget.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purchase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choices.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compliant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acquisition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quotes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sticky-notes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\request.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subbudget.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fund.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-task.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purchase %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\summary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oldcart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inactive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order-change-cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\force.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\investment-report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rfq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signature.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\currency.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\partner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bin.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties ShouldAddDPIScalingManifest="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
