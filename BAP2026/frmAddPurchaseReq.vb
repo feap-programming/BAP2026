@@ -567,8 +567,8 @@ Public Class FrmAddPurchaseReq
 
         End If
 
-
     End Sub
+
 
     Private Sub LoadItems()
 
@@ -867,12 +867,12 @@ Public Class FrmAddPurchaseReq
                 .DisplayMember = "fldActivity"
             End With
 
-
         Else
 
             RadMessageBox.Show("no data found")
 
         End If
+
     End Sub
 
     Private Sub LoadAllProcess()
@@ -1487,7 +1487,6 @@ Public Class FrmAddPurchaseReq
 
 
         'End If
-
 
 
     End Sub

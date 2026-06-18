@@ -39,4 +39,5 @@ Module GlobalVariables
     Public connString As String = "Data Source=" & My.Settings.setSAPServerAddress & ";Initial Catalog=" & My.Settings.setSAPServerName & ";User ID=" & My.Settings.setSAPUsername & ";Password=" & My.Settings.setSAPPassword & "; Connection Timeout=500;"
 
     Public myParamSAP As New List(Of SqlParameter)
+
 End Module

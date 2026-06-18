@@ -183,6 +183,7 @@
     <Compile Include="Controller\GeneralQueries\cGenerateConversion.vb" />
     <Compile Include="Controller\GeneralQueries\cGenerateSubRefNo.vb" />
     <Compile Include="Controller\GeneralQueries\cGenerateTCID.vb" />
+    <Compile Include="Controller\GeneralQueries\cGetAllDeptCode.vb" />
     <Compile Include="Controller\GeneralQueries\cGetSummaryTM.vb" />
     <Compile Include="Controller\GeneralQueries\cGetTJPY.vb" />
     <Compile Include="Controller\GeneralQueries\cGetUID.vb" />
@@ -216,8 +217,10 @@
     <Compile Include="Controller\GeneralQueries\cSelectYear.vb" />
     <Compile Include="Controller\GeneralQueries\cUpdateMajorBudget.vb" />
     <Compile Include="Controller\SAP\cSelectCurrency.vb" />
+    <Compile Include="Controller\SAP\cSelectCurrencyPO.vb" />
     <Compile Include="Controller\SAP\cSelectInvestment.vb" />
     <Compile Include="Controller\SAP\cSelectItemCode.vb" />
+    <Compile Include="Controller\SAP\cSelectSupplier.vb" />
     <Compile Include="Controller\SAP\cSelectUOM.vb" />
     <Compile Include="Controller\Users\cDeleteUser.vb" />
     <Compile Include="Controller\Users\cInsertUsers.vb" />
@@ -279,6 +282,7 @@
     <Compile Include="GridViews\cGvAllMajorRef.vb" />
     <Compile Include="UI\cHomeUI.vb" />
     <Compile Include="UI\cOpenChildForm.vb" />
+    <Compile Include="UI\cPOUI.vb" />
     <Compile Include="UI\cPurchaseReqUI.vb" />
     <EmbeddedResource Include="Controller\GeneralQueries\cInsertActivityModelByPR.resx">
       <DependentUpon>cInsertActivityModelByPR.vb</DependentUpon>
