@@ -31,6 +31,13 @@ Public Class FrmDashboard_vb1
         RadPanel2.Visible = False
     End Sub
 
+    Private Function checkDept() As Boolean
+        Dim dept As Boolean
+
+        dept = If(GlobalVariables.SelectedDept <> String.Empty, True, False)
+        Return dept
+    End Function
+
     Private Sub FrmDashboard_vb1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
@@ -204,48 +211,57 @@ Public Class FrmDashboard_vb1
 
 
     Private Sub treeModules_NodeMouseClick(sender As Object, e As Telerik.WinControls.UI.RadTreeViewEventArgs) Handles treeModules.NodeMouseClick
-        Select Case e.Node.Name
+        Dim bSelectDept As Boolean = checkDept()
+
+        If bSelectDept Then
+
+            Select Case e.Node.Name
 
 
-            Case "nodeManageuser"
+                Case "nodeManageuser"
 
-                Dim frmUser As New FrmRegister
+                    Dim frmUser As New FrmRegister
 
-                ShowLoading()
+                    ShowLoading()
 
-                Task.Run(Sub()
-                             ' Background: DB calls only
-                             frmUser.PreloadData()
+                    Task.Run(Sub()
+                                 ' Background: DB calls only
+                                 frmUser.PreloadData()
 
-                             ' UI thread: show the form (triggers Form_Load which does UI setup)
-                             Me.Invoke(Sub()
-                                           openchildform.openChildform(frmUser, pnlBody)
-                                           HideLoading()
-                                       End Sub)
-                         End Sub)
+                                 ' UI thread: show the form (triggers Form_Load which does UI setup)
+                                 Me.Invoke(Sub()
+                                               openchildform.openChildform(frmUser, pnlBody)
+                                               HideLoading()
+                                           End Sub)
+                             End Sub)
 
-            Case "nodeCreateBudget"
-                Dim frmbcdudget As New frmCreateBudget
-                frmbcdudget.SelectedDept = frmhome.SelectedDept
-                LoadingForm(frmbcdudget)
-
-
-            Case "nodeNewRequisition"
-
-                Dim frmaddPR As New FrmAddPurchaseReq
-                frmaddPR.SelectedDept = frmhome.SelectedDept
-
-                LoadingForm(frmaddPR)
+                Case "nodeCreateBudget"
+                    Dim frmbcdudget As New frmCreateBudget
+                    frmbcdudget.SelectedDept = frmhome.SelectedDept
+                    LoadingForm(frmbcdudget)
 
 
-            Case "nodeCreateOrder"
+                Case "nodeNewRequisition"
 
-                Dim frmaddPO As New FrmAddPO
-                frmaddPO.SelectedDept = frmhome.SelectedDept
+                    Dim frmaddPR As New FrmAddPurchaseReq
+                    frmaddPR.SelectedDept = frmhome.SelectedDept
 
-                LoadingForm(frmaddPO)
-        End Select
+                    LoadingForm(frmaddPR)
 
+
+                Case "nodeCreateOrder"
+
+                    Dim frmaddPO As New FrmAddPO
+                    frmaddPO.SelectedDept = frmhome.SelectedDept
+
+                    LoadingForm(frmaddPO)
+            End Select
+
+        Else
+            RadMessageBox.SetThemeName("VisualStudio2022Light")
+            RadMessageBox.Show("Please select a department to proceed.", "Department Not Selected", MessageBoxButtons.OK, RadMessageIcon.Error)
+            Return
+        End If
 
     End Sub
 
@@ -276,5 +292,7 @@ Public Class FrmDashboard_vb1
         Application.Exit()
     End Sub
 
+    Private Sub treeModules_SelectedNodeChanged(sender As Object, e As RadTreeViewEventArgs) Handles treeModules.SelectedNodeChanged
 
+    End Sub
 End Class
