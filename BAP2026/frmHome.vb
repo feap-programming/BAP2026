@@ -5,6 +5,7 @@ Public Class FrmHome
     Dim dbHrms As New cHrmsDb
     Dim dbMain As New cMainDb
     Dim cUsers As New cselectUsers
+    Dim cUpdate As New cUpdateUser
 
 
 
@@ -22,15 +23,33 @@ Public Class FrmHome
         End Get
     End Property
 
+    Private Sub loadDefaultDept()
+        Dim dt As DataTable
+        dt = cUsers.SelectDefaultDeptByEmpNo(GlobalVariables.empNo)
 
+        If dt.Rows.Count > 0 Then
+            If dt.Rows(0).Item("fldDefaultDept").ToString <> String.Empty Then
+                listDept.SelectedValue = dt.Rows(0).Item("fldDefaultDept").ToString
+                lblDefaultDept.Text = dt.Rows(0).Item("fldDefaultDept").ToString
+            End If
+        End If
+    End Sub
 
     Private Sub FrmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        If RadDropDownList1.Text <> "" Then
+        'If RadDropDownList1.Text <> "" Then
 
 
-            GlobalVariables.SelectedDept = RadDropDownList1.Text
+        '    GlobalVariables.SelectedDept = RadDropDownList1.Text
 
+
+        'End If
+        loadDept()
+
+        If listDept.SelectedIndex <> -1 Then
+
+            loadDefaultDept()
+            GlobalVariables.SelectedDept = listDept.SelectedValue.ToString
 
         End If
 
@@ -48,17 +67,15 @@ Public Class FrmHome
 
         'LoadDepartment()
 
-        frmaddrec.SelectedDept = RadDropDownList1.Text
-        frmpurchaserec.SelectedDept = RadDropDownList1.Text
+        frmaddrec.SelectedDept = listDept.SelectedValue.ToString
+        frmpurchaserec.SelectedDept = listDept.SelectedValue.ToString
 
 
         Dim frm1 As New FrmAddMajorRef()
-        frm1.SelectedDept = RadDropDownList1.Text
+        frm1.SelectedDept = listDept.SelectedValue.ToString
 
         Dim frm2 As New FrmAddPurchaseReq()
-        frm2.SelectedDept = RadDropDownList1.Text
-
-
+        frm2.SelectedDept = listDept.SelectedValue.ToString
 
 
         'Dim frm3 As New frmCreateBudget()
@@ -67,8 +84,6 @@ Public Class FrmHome
 
         'cbDept.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
 
-
-        loadDept()
         clearfield()
 
     End Sub
@@ -130,6 +145,15 @@ Public Class FrmHome
 
             '    MessageBox.Show("No departmen found")
 
+            With listDept
+
+                .DataSource = Nothing
+                .DataSource = dtemp
+                .DisplayMember = "DeptCode"
+                .ValueMember = "DeptCode"
+
+
+            End With
 
         End If
 
@@ -140,6 +164,19 @@ Public Class FrmHome
 
     Private Sub RadDropDownList1_SelectedIndexChanged(sender As Object, e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles RadDropDownList1.SelectedIndexChanged
 
-        GlobalVariables.SelectedDept = RadDropDownList1.Text
+        'GlobalVariables.SelectedDept = RadDropDownList1.Text
+    End Sub
+
+    Private Sub listDept_SelectedIndexChanged(sender As Object, e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles listDept.SelectedIndexChanged
+        lblDeptSelected.Text = listDept.SelectedValue.ToString
+        GlobalVariables.SelectedDept = listDept.SelectedValue.ToString
+    End Sub
+
+    Private Sub btnDefault_Click(sender As Object, e As EventArgs) Handles btnDefault.Click
+        Dim bUpdate As Boolean
+        If listDept.SelectedIndex <> -1 Then
+            bUpdate = cUpdate.UpdateDefaultDept(txtempNo.Text, listDept.SelectedValue.ToString)
+            loadDefaultDept()
+        End If
     End Sub
 End Class

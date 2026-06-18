@@ -50,4 +50,18 @@
 
         Return bStatus
     End Function
+
+    Public Function UpdateDefaultDept(ByVal parEmpNo As String, ByVal parDefaultDept As String)
+
+
+        Dim bStatus As Boolean
+        GlobalVariables.myParam.Clear()
+        dbMain.addParameters("parEmpNo", parEmpNo)
+        dbMain.addParameters("parDefaultDept", parDefaultDept)
+
+
+        bStatus = dbMain.dbAED("SP_UpdateDefaultDept")
+
+        Return bStatus
+    End Function
 End Class

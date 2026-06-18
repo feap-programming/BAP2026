@@ -27,6 +27,14 @@ Public Class cselectUsers
         Return dt
     End Function
 
+    Public Function SelectDefaultDeptByEmpNo(ByVal empNo As String) As DataTable
+        Dim dt As DataTable
+        GlobalVariables.myParam.Clear()
+        dbMain.addParameters("parEmpNo", empNo)
+        dt = dbMain.dbSelect("SP_SelectDefaultDeptByEmpNo")
+        Return dt
+    End Function
+
     Public Function GetClassDesc() As DataTable
         Dim dt As New DataTable
 
