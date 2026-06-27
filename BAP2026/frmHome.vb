@@ -29,9 +29,13 @@ Public Class FrmHome
 
         If dt.Rows.Count > 0 Then
             If dt.Rows(0).Item("fldDefaultDept").ToString <> String.Empty Then
-                listDept.SelectedValue = dt.Rows(0).Item("fldDefaultDept").ToString
+                listDept.SelectedValue = dt.Rows(0)("fldDefaultDept").ToString()
                 lblDefaultDept.Text = dt.Rows(0).Item("fldDefaultDept").ToString
+            Else
+                lblDefaultDept.Text = "N/A"
             End If
+        Else
+            lblDefaultDept.Text = "N/A"
         End If
     End Sub
 
@@ -45,13 +49,13 @@ Public Class FrmHome
 
         'End If
         loadDept()
+        loadDefaultDept()
 
-        If listDept.SelectedIndex <> -1 Then
-
-            loadDefaultDept()
-            GlobalVariables.SelectedDept = listDept.SelectedValue.ToString
-
+        If listDept.SelectedValue IsNot Nothing Then
+            GlobalVariables.SelectedDept = listDept.SelectedValue.ToString()
         End If
+
+        RemoveHandler listDept.SelectedIndexChanged, AddressOf listDept_SelectedIndexChanged
 
 
         txtdate.Text = Date.Now.ToString("MMMM dd, yyyy")
@@ -131,15 +135,15 @@ Public Class FrmHome
 
         If dtemp IsNot Nothing AndAlso dtemp.Rows.Count > 0 Then
 
-            With RadDropDownList1
+            'With RadDropDownList1
 
-                .DataSource = Nothing
-                .DataSource = dtemp
-                .DisplayMember = "DeptCode"
-                .ValueMember = "DeptCode"
+            '    .DataSource = Nothing
+            '    .DataSource = dtemp
+            '    .DisplayMember = "DeptCode"
+            '    .ValueMember = "DeptCode"
 
 
-            End With
+            'End With
 
             'Else
 
@@ -148,9 +152,9 @@ Public Class FrmHome
             With listDept
 
                 .DataSource = Nothing
-                .DataSource = dtemp
                 .DisplayMember = "DeptCode"
                 .ValueMember = "DeptCode"
+                .DataSource = dtemp
 
 
             End With
@@ -168,8 +172,8 @@ Public Class FrmHome
     End Sub
 
     Private Sub listDept_SelectedIndexChanged(sender As Object, e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles listDept.SelectedIndexChanged
-        lblDeptSelected.Text = listDept.SelectedValue.ToString
-        GlobalVariables.SelectedDept = listDept.SelectedValue.ToString
+        GlobalVariables.SelectedDept = listDept.SelectedItem.Text
+        lblDeptSelected.Text = listDept.SelectedItem.Text
     End Sub
 
     Private Sub btnDefault_Click(sender As Object, e As EventArgs) Handles btnDefault.Click
@@ -178,5 +182,9 @@ Public Class FrmHome
             bUpdate = cUpdate.UpdateDefaultDept(txtempNo.Text, listDept.SelectedValue.ToString)
             loadDefaultDept()
         End If
+    End Sub
+
+    Private Sub FrmHome_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        AddHandler listDept.SelectedIndexChanged, AddressOf listDept_SelectedIndexChanged
     End Sub
 End Class

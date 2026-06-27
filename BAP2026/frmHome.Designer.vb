@@ -31,6 +31,8 @@ Partial Class FrmHome
         Me.txtgroup = New Telerik.WinControls.UI.RadLabel()
         Me.RadDropDownList1 = New Telerik.WinControls.UI.RadDropDownList()
         Me.RadPanel2 = New Telerik.WinControls.UI.RadPanel()
+        Me.RadLabel8 = New Telerik.WinControls.UI.RadLabel()
+        Me.lblDefaultDept = New Telerik.WinControls.UI.RadLabel()
         Me.btnDefault = New Telerik.WinControls.UI.RadButton()
         Me.lblDeptSelected = New Telerik.WinControls.UI.RadLabel()
         Me.listDept = New Telerik.WinControls.UI.RadListControl()
@@ -41,8 +43,6 @@ Partial Class FrmHome
         Me.RadLabel3 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel2 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadLabel8 = New Telerik.WinControls.UI.RadLabel()
-        Me.lblDefaultDept = New Telerik.WinControls.UI.RadLabel()
         CType(Me.txtName, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtempNo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtSection, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,6 +52,8 @@ Partial Class FrmHome
         CType(Me.RadDropDownList1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadPanel2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPanel2.SuspendLayout()
+        CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblDefaultDept, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnDefault, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblDeptSelected, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.listDept, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,8 +64,6 @@ Partial Class FrmHome
         CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblDefaultDept, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -158,6 +158,25 @@ Partial Class FrmHome
         Me.RadPanel2.Size = New System.Drawing.Size(1193, 560)
         Me.RadPanel2.TabIndex = 8
         Me.RadPanel2.ThemeName = "VisualStudio2022Light"
+        '
+        'RadLabel8
+        '
+        Me.RadLabel8.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadLabel8.Location = New System.Drawing.Point(12, 192)
+        Me.RadLabel8.Name = "RadLabel8"
+        Me.RadLabel8.Size = New System.Drawing.Size(109, 24)
+        Me.RadLabel8.TabIndex = 11
+        Me.RadLabel8.Text = "Default Dept.:"
+        Me.RadLabel8.ThemeName = "VisualStudio2022Light"
+        '
+        'lblDefaultDept
+        '
+        Me.lblDefaultDept.Location = New System.Drawing.Point(127, 195)
+        Me.lblDefaultDept.Name = "lblDefaultDept"
+        Me.lblDefaultDept.Size = New System.Drawing.Size(36, 21)
+        Me.lblDefaultDept.TabIndex = 10
+        Me.lblDefaultDept.Text = "Dept"
+        Me.lblDefaultDept.ThemeName = "VisualStudio2022Light"
         '
         'btnDefault
         '
@@ -257,25 +276,6 @@ Partial Class FrmHome
         Me.RadLabel1.Text = "Date:"
         Me.RadLabel1.ThemeName = "VisualStudio2022Light"
         '
-        'RadLabel8
-        '
-        Me.RadLabel8.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadLabel8.Location = New System.Drawing.Point(12, 192)
-        Me.RadLabel8.Name = "RadLabel8"
-        Me.RadLabel8.Size = New System.Drawing.Size(109, 24)
-        Me.RadLabel8.TabIndex = 11
-        Me.RadLabel8.Text = "Default Dept.:"
-        Me.RadLabel8.ThemeName = "VisualStudio2022Light"
-        '
-        'lblDefaultDept
-        '
-        Me.lblDefaultDept.Location = New System.Drawing.Point(127, 195)
-        Me.lblDefaultDept.Name = "lblDefaultDept"
-        Me.lblDefaultDept.Size = New System.Drawing.Size(36, 21)
-        Me.lblDefaultDept.TabIndex = 10
-        Me.lblDefaultDept.Text = "Dept"
-        Me.lblDefaultDept.ThemeName = "VisualStudio2022Light"
-        '
         'FrmHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -297,6 +297,8 @@ Partial Class FrmHome
         CType(Me.RadPanel2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPanel2.ResumeLayout(False)
         Me.RadPanel2.PerformLayout()
+        CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblDefaultDept, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnDefault, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblDeptSelected, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.listDept, System.ComponentModel.ISupportInitialize).EndInit()
@@ -307,8 +309,6 @@ Partial Class FrmHome
         CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblDefaultDept, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
