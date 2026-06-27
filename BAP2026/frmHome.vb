@@ -134,9 +134,9 @@ Public Class FrmHome
             With RadDropDownList1
 
                 .DataSource = Nothing
-                .DataSource = dtemp
                 .DisplayMember = "DeptCode"
                 .ValueMember = "DeptCode"
+                .DataSource = dtemp
 
 
             End With
@@ -148,9 +148,9 @@ Public Class FrmHome
             With listDept
 
                 .DataSource = Nothing
-                .DataSource = dtemp
                 .DisplayMember = "DeptCode"
                 .ValueMember = "DeptCode"
+                .DataSource = dtemp
 
 
             End With
