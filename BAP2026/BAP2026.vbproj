@@ -77,81 +77,96 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Telerik.WinControls, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.dll</HintPath>
+    <Reference Include="Telerik.WinControls, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.GridView, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.GridView.dll</HintPath>
+    <Reference Include="Telerik.WinControls.GridView, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.GridView.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.RadDock, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.RadDock.dll</HintPath>
+    <Reference Include="Telerik.WinControls.RadDock, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.RadDock.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.Themes.Aqua, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.Themes.Breeze, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.Breeze.dll</HintPath>
+    <Reference Include="Telerik.WinControls.Themes.Aqua, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.Themes.Aqua.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.Themes.Crystal, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.Crystal.dll</HintPath>
+    <Reference Include="Telerik.WinControls.Themes.Breeze, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.Themes.Breeze.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.Themes.CrystalDark, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.CrystalDark.dll</HintPath>
+    <Reference Include="Telerik.WinControls.Themes.Crystal, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.Themes.Crystal.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.Themes.Desert, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.Desert.dll</HintPath>
+    <Reference Include="Telerik.WinControls.Themes.CrystalDark, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.Themes.CrystalDark.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.Themes.FluentDark, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.FluentDark.dll</HintPath>
+    <Reference Include="Telerik.WinControls.Themes.Desert, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.Themes.Desert.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.Themes.Material, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.Material.dll</HintPath>
+    <Reference Include="Telerik.WinControls.Themes.FluentDark, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.Themes.FluentDark.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.Themes.MaterialBlueGrey, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.MaterialBlueGrey.dll</HintPath>
+    <Reference Include="Telerik.WinControls.Themes.Material, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.Themes.Material.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.Themes.MaterialPink, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.Themes.MaterialTeal, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.MaterialTeal.dll</HintPath>
+    <Reference Include="Telerik.WinControls.Themes.MaterialBlueGrey, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.Themes.MaterialBlueGrey.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.Themes.Office2007Silver, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.Themes.Office2010Blue, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.Themes.Office2019, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.Office2019.dll</HintPath>
+    <Reference Include="Telerik.WinControls.Themes.MaterialPink, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.Themes.MaterialPink.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.Themes.TelerikMetroBlue, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.TelerikMetroBlue.dll</HintPath>
+    <Reference Include="Telerik.WinControls.Themes.MaterialTeal, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.Themes.MaterialTeal.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.Themes.TelerikMetroTouch, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.TelerikMetroTouch.dll</HintPath>
+    <Reference Include="Telerik.WinControls.Themes.Office2007Silver, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.Themes.Office2007Silver.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.Themes.VisualStudio2022, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.VisualStudio2022.dll</HintPath>
+    <Reference Include="Telerik.WinControls.Themes.Office2010Blue, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.Themes.Office2010Blue.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.Themes.Windows11, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.Themes.Windows11.dll</HintPath>
+    <Reference Include="Telerik.WinControls.Themes.Office2019, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.Themes.Office2019.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.Themes.Windows8, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.UI, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2025.4.1111.462\Telerik.WinControls.UI.dll</HintPath>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroBlue, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.Themes.TelerikMetroBlue.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="TelerikCommon, Version=2025.4.1111.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2025.4.1111.462\TelerikCommon.dll</HintPath>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroTouch, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.Themes.TelerikMetroTouch.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2022, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.Themes.VisualStudio2022.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Windows11, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.Themes.Windows11.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Windows8, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.Themes.Windows8.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\TelerikCommon.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="UIAutomationClient" />

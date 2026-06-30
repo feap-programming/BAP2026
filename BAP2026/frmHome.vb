@@ -135,27 +135,6 @@ Public Class FrmHome
 
         If dtemp IsNot Nothing AndAlso dtemp.Rows.Count > 0 Then
 
-            'With RadDropDownList1
-
-<<<<<<< HEAD
-                .DataSource = Nothing
-                .DisplayMember = "DeptCode"
-                .ValueMember = "DeptCode"
-                .DataSource = dtemp
-=======
-            '    .DataSource = Nothing
-            '    .DataSource = dtemp
-            '    .DisplayMember = "DeptCode"
-            '    .ValueMember = "DeptCode"
->>>>>>> 0c7865b424dcae49f9ba86031cbf9f561e251cfe
-
-
-            'End With
-
-            'Else
-
-            '    MessageBox.Show("No departmen found")
-
             With listDept
 
                 .DataSource = Nothing

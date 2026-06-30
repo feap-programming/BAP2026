@@ -27,6 +27,9 @@ Public Class cPOUI
         gv.EnableAlternatingRowColor = True
         gv.SelectionMode = GridViewSelectionMode.FullRowSelect
 
+        gv.EnableFiltering = True
+        gv.ShowGroupPanel = False
+
         gv.TableElement.TextAlignment = ContentAlignment.MiddleCenter
         gv.TableElement.RowHeight = 28
 
@@ -79,6 +82,7 @@ Public Class cPOUI
         gvlist.EnableAlternatingRowColor = True
 
         gvlist.EnableFiltering = True
+        gvlist.ShowGroupPanel = False
 
         gvlist.SelectionMode = GridViewSelectionMode.FullRowSelect
         gvlist.TableElement.TextAlignment = ContentAlignment.MiddleCenter
@@ -199,6 +203,7 @@ Public Class cPOUI
         gvPO.EnableAlternatingRowColor = True
 
         gvPO.EnableFiltering = True
+        gvPO.ShowGroupPanel = False
 
         gvPO.SelectionMode = GridViewSelectionMode.FullRowSelect
         gvPO.TableElement.TextAlignment = ContentAlignment.MiddleCenter
