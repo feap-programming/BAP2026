@@ -36,6 +36,10 @@ Public Class FrmAddPO
 
     Dim dtCreatepo As New DataTable
 
+    Dim dtCreatePOI As New DataTable
+
+    Dim cCreatePOI As New cAddPOI
+
     Private Sub FrmAddPO_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
@@ -156,7 +160,7 @@ Public Class FrmAddPO
 
     End Sub
 
-    Private Sub fetchbtnSirts(PRNO As Decimal)
+    Private Sub fetchbtnSirts(PRNO As String)
 
         dtItemPO = cItemPO.getItemPObyPRNO(PRNO)
 
@@ -457,58 +461,75 @@ Public Class FrmAddPO
     End Sub
 
 
-    Private Sub AddPO(pSupplier As String, pVCode As String, pMOrdered As Date, pDDate As Date, pCurrency As String, pDiscount As Decimal, pDAmount As Decimal,
-                      pPTO As Decimal, pPOAmt As Decimal, pRemarks As String, pSignature As String, pRate As Decimal)
-
-
+    Private Function AddPO(pSupplier As String, pVCode As String, pMOrdered As Date, pDDate As Date, pCurrency As String, pDiscount As Decimal, pDAmount As Decimal,
+                       pPTO As Decimal, pPOAmt As Decimal, pRemarks As String, pSignature As String, pRate As Decimal) As String
         dtCreatepo = cCreatePO.CreatePo(pSupplier, pVCode, pMOrdered, pDDate, pCurrency, pDiscount, pDAmount, pPTO, pPOAmt, pRemarks, pSignature, pRate)
+        Return dtCreatepo.Rows(0).Item("OB_Line").ToString()
+    End Function
 
+    Private Function AddPOI(pchk As String, pPRNUM As String, pQTY As Decimal, pMO As Date, pSignature As String, pUP As Decimal, pTC As Decimal,
+                        pCurrency As String, pDD As Date, pRate As Decimal, pfldMOID As String, pQTYOUT As Decimal) As String
+        dtCreatePOI = cCreatePOI.cAddPOI(pchk, pPRNUM, pQTY, pMO, pSignature, pUP, pTC, pCurrency, pDD, pRate, pfldMOID, pQTYOUT)
+        Return dtCreatePOI.Rows(0).Item("OB_Detail_ID").ToString()
+    End Function
 
-
-
-    End Sub
 
 
     Private Sub btnPO_Click(sender As Object, e As EventArgs) Handles btnPO.Click
 
-        Dim chik As String
         Dim venCode As String = VCdd.Text
         Dim remarks As String = tbcRemakrs.Text
 
+        Dim chik As String = AddPO(pSupplier:=Supdd.Text, pVCode:=venCode, pMOrdered:=dtpMO.Value, pDDate:=dtpDD.Value,
+        pCurrency:=tbCurrency.Text, pDiscount:=Convert.ToDecimal(mebDISC.Value), pDAmount:=Convert.ToDecimal(mebPrice.Value),
+        pPTO:=Convert.ToDecimal(MEBTPO.Value), pPOAmt:=Convert.ToDecimal(mebTotal.Value), pRemarks:=remarks, pSignature:=tbSignature.Text,
+        pRate:=Convert.ToDecimal(mebRate.Value))
+
         For y As Integer = 0 To gvCreatePO.ChildRows.Count - 1
-
-
             gvCreatePO.ChildRows(y).Cells("OB_LINE").Value = chik
             gvCreatePO.ChildRows(y).Cells("PO").Value = mebTotal.Value
             gvCreatePO.ChildRows(y).Cells("fldSupplier").Value = venCode
             gvCreatePO.ChildRows(y).Cells("Remarks").Value = remarks
-            'Dim PV As String = gvCreatePO.CurrentRow.Cells("")
-
-
-
         Next
 
+        RadMessageBox.SetThemeName("Windows8")
+        RadMessageBox.Show("INSERTED PO", "Notification", MessageBoxButtons.OK, RadMessageIcon.Info)
+        '---------------------AddPO---------------------
 
-        AddPO(
-        pSupplier:=Supdd.Text,
-        pVCode:=venCode,
-        pMOrdered:=dtpMO.Value,
-        pDDate:=dtpDD.Value,
-        pCurrency:=tbCurrency.Text,
-        pDiscount:=Convert.ToDecimal(mebDISC.Value),
-        pDAmount:=Convert.ToDecimal(mebPrice.Value),
-        pPTO:=Convert.ToDecimal(MEBTPO.Value),
-        pPOAmt:=Convert.ToDecimal(mebTotal.Value),
-        pRemarks:=remarks,
+        '---------------------AddPOI---------------------
+        For x As Integer = 0 To gvCreatePO.ChildRows.Count - 1
+
+
+
+
+            Dim UP As Decimal = Convert.ToDecimal(gvCreatePO.ChildRows(x).Cells("Price").Value)
+            Dim TC As Decimal = Convert.ToDecimal(gvCreatePO.ChildRows(x).Cells("PO").Value)
+            Dim QTY As Integer = Convert.ToInt32(gvCreatePO.ChildRows(x).Cells("fldQTYEB").Value)
+            Dim PRNum As String = gvCreatePO.ChildRows(x).Cells("fldPRNo").Value.ToString
+            Dim DD As Date = dtpDD.Value
+            Dim MO As Date = dtpMO.Value
+            Dim fldMOID As String = gvCreatePO.ChildRows(x).Cells("fldMOIID").Value.ToString
+            Dim QTYOUT As Integer
+            Integer.TryParse(gvCreatePO.ChildRows(x).Cells("fldQTYSOUT").Value?.ToString(), QTYOUT)
+
+            Dim newDetailID As String = AddPOI(
+        pchk:=chik,
+        pPRNUM:=PRNum,
+        pQTY:=QTY,
+        pMO:=MO,
         pSignature:=tbSignature.Text,
-        pRate:=Convert.ToDecimal(mebRate.Value))
-
-
+        pUP:=UP,
+        pTC:=TC,
+        pCurrency:=tbCurrency.Text,
+        pDD:=DD,
+        pRate:=Convert.ToDecimal(mebRate.Value),
+        pfldMOID:=fldMOID,
+         pQTYOUT:=QTYOUT)
+            gvCreatePO.ChildRows(x).Cells("DetailID").Value = newDetailID
+        Next
 
         RadMessageBox.SetThemeName("Windows8")
-        RadMessageBox.Show("INSERTED", "Notification", MessageBoxButtons.OK, RadMessageIcon.Info)
-
-
+        RadMessageBox.Show("INSERTED POI", "Notification", MessageBoxButtons.OK, RadMessageIcon.Info)
     End Sub
 
 End Class
