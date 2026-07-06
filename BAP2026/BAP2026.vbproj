@@ -199,6 +199,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\GeneralQueries\cAddConversion.vb" />
+    <Compile Include="Controller\GeneralQueries\cAddPOI.vb" />
     <Compile Include="Controller\GeneralQueries\cCreatePO.vb" />
     <Compile Include="Controller\GeneralQueries\cDeleteMajorRef.vb" />
     <Compile Include="Controller\GeneralQueries\cGenerateConversion.vb" />

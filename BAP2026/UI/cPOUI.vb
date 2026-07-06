@@ -332,7 +332,7 @@ Public Class cPOUI
         fldQTYSOUT.FieldName = "fldQTYSOUT"
         fldQTYSOUT.Width = 90
         fldQTYSOUT.TextAlignment = ContentAlignment.MiddleCenter
-        fldQTYSOUT.IsVisible = False
+        fldQTYSOUT.IsVisible = True
         gvPO.Columns.Add(fldQTYSOUT)
 
         Dim fldPRNUM As New GridViewTextBoxColumn()

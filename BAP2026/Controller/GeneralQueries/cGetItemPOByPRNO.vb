@@ -4,7 +4,7 @@ Public Class cGetItemPOByPRNO
 
     Dim dbMain As New cMainDb
 
-    Public Function getItemPObyPRNO(PRNo As Decimal) As DataTable
+    Public Function getItemPObyPRNO(PRNo As String) As DataTable
 
         Dim dt As DataTable
 

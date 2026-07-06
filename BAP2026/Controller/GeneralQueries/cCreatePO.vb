@@ -7,7 +7,8 @@ Public Class cCreatePO
 
 
     Public Function CreatePo(pSupplier As String, pVCode As String, pMOrdered As Date, pDDate As Date, pCurrency As String, pDiscount As Decimal, pDAmount As Decimal,
-                             pPTO As Decimal, pPOAmt As Decimal, pRemarks As String, pSignature As String, pRate As Decimal)
+                         pPTO As Decimal, pPOAmt As Decimal, pRemarks As String, pSignature As String, pRate As Decimal) As DataTable
+
 
         Dim dt As DataTable
 
@@ -26,7 +27,7 @@ Public Class cCreatePO
         GlobalVariables.myParam.Add(New MySql.Data.MySqlClient.MySqlParameter("@pSignature", pSignature))
         GlobalVariables.myParam.Add(New MySql.Data.MySqlClient.MySqlParameter("@pRate", pRate))
 
-        dt = dbMain.dbSelect("SP_CREATEPO")
+        dt = dbMain.dbSelect("SP_CREATETBLPO")
 
         Return dt
 
