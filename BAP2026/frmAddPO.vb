@@ -2,6 +2,7 @@
 Imports Google.Protobuf.Reflection
 Imports Telerik.WinControls
 Imports Telerik.WinControls.UI
+Imports Telerik.WinControls.UI.Export
 
 Public Class FrmAddPO
 
@@ -530,6 +531,77 @@ Public Class FrmAddPO
 
         RadMessageBox.SetThemeName("Windows8")
         RadMessageBox.Show("INSERTED POI", "Notification", MessageBoxButtons.OK, RadMessageIcon.Info)
+
+
+
+        Try
+            '-------------------'
+            '-- EXPORT TO SAP --'
+            '-------------------'
+
+            Dim exporter As ExportToCSV = New ExportToCSV(gvCreatePO)
+            exporter.FileExtension = "csv"
+
+            Dim Time As String = System.DateTime.Now.ToString("ddMMyyyyHHmmss")
+            exporter.SummariesExportOption = SummariesOption.DoNotExport
+
+            Dim fileName As String = "\\192.168.191.48\Test-Backup$" & "\" & Time & ".csv"
+            'Dim fileName As String = Application.StartupPath & Time & ".csv"
+
+            exporter.RunExport(fileName)
+
+            Dim text As String() = System.IO.File.ReadAllLines(fileName)
+
+            For i As Integer = 0 To text.Length - 1
+                text(i) = text(i).Replace("""", "")
+            Next
+
+            System.IO.File.WriteAllLines(fileName, text)
+
+            '---------'
+            '-- END --'
+            '---------'
+
+        Catch ex As Exception
+
+        End Try
+        '----------------------------------------------------------------------
+        '----------------------------------------------------
+        'New Code replace SAP--------------------------
+        'For desktop Program Files
+        'Try
+        '    '-------------------'
+        '    '-- EXPORT TO SAP --'
+        '    '-------------------'
+
+        '    Dim exporter As ExportToCSV = New ExportToCSV(gvCreatePO)
+        '    exporter.FileExtension = "csv"
+
+        '    Dim Time As String = System.DateTime.Now.ToString("ddMMyyyyHHmmss")
+        '    exporter.SummariesExportOption = SummariesOption.DoNotExport
+
+        '    Dim fileName As String = Application.StartupPath + "\Test-SAP-INTIGRATION" & "\" & Time & ".csv"
+
+        '    exporter.RunExport(fileName)
+
+        '    Dim text As String() = System.IO.File.ReadAllLines(fileName)
+
+        '    For i As Integer = 0 To text.Length - 1
+        '        text(i) = text(i).Replace("""", "")
+        '    Next
+
+        '    System.IO.File.WriteAllLines(fileName, text)
+
+        '    '---------'
+        '    '-- END --'
+        '    '---------'
+
+        'Catch ex As Exception
+
+        'End Try
+        '------------------------------------------------
+
+
     End Sub
 
 End Class
