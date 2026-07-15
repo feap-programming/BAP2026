@@ -130,7 +130,6 @@ Public Class FrmAddPO
 
             mebDISC.Value = (mebPrice.Value / MEBTPO.Value) * 100
 
-
         End If
 
     End Sub
@@ -250,8 +249,6 @@ Public Class FrmAddPO
 
 
         End If
-
-
 
     End Sub
 
@@ -425,7 +422,6 @@ Public Class FrmAddPO
             e.CellElement.BackColor = System.Drawing.Color.DarkGray
 
         Else
-
             e.CellElement.DrawFill = True
             e.CellElement.BackColor = System.Drawing.Color.Transparent
 
@@ -472,6 +468,7 @@ Public Class FrmAddPO
                         pCurrency As String, pDD As Date, pRate As Decimal, pfldMOID As String, pQTYOUT As Decimal) As String
         dtCreatePOI = cCreatePOI.cAddPOI(pchk, pPRNUM, pQTY, pMO, pSignature, pUP, pTC, pCurrency, pDD, pRate, pfldMOID, pQTYOUT)
         Return dtCreatePOI.Rows(0).Item("OB_Detail_ID").ToString()
+
     End Function
 
 
@@ -513,21 +510,28 @@ Public Class FrmAddPO
             Dim QTYOUT As Integer
             Integer.TryParse(gvCreatePO.ChildRows(x).Cells("fldQTYSOUT").Value?.ToString(), QTYOUT)
 
+
+
+
             Dim newDetailID As String = AddPOI(
-        pchk:=chik,
-        pPRNUM:=PRNum,
-        pQTY:=QTY,
-        pMO:=MO,
-        pSignature:=tbSignature.Text,
-        pUP:=UP,
-        pTC:=TC,
-        pCurrency:=tbCurrency.Text,
-        pDD:=DD,
-        pRate:=Convert.ToDecimal(mebRate.Value),
-        pfldMOID:=fldMOID,
-         pQTYOUT:=QTYOUT)
+            pchk:=chik,
+            pPRNUM:=PRNum,
+            pQTY:=QTY,
+            pMO:=MO,
+            pSignature:=tbSignature.Text,
+            pUP:=UP,
+            pTC:=TC,
+            pCurrency:=tbCurrency.Text,
+            pDD:=DD,
+            pRate:=Convert.ToDecimal(mebRate.Value),
+            pfldMOID:=fldMOID,
+            pQTYOUT:=QTYOUT)
             gvCreatePO.ChildRows(x).Cells("DetailID").Value = newDetailID
+
+
         Next
+
+
 
         RadMessageBox.SetThemeName("Windows8")
         RadMessageBox.Show("INSERTED POI", "Notification", MessageBoxButtons.OK, RadMessageIcon.Info)
@@ -545,8 +549,8 @@ Public Class FrmAddPO
             Dim Time As String = System.DateTime.Now.ToString("ddMMyyyyHHmmss")
             exporter.SummariesExportOption = SummariesOption.DoNotExport
 
-            Dim fileName As String = "\\192.168.191.48\Test-Backup$" & "\" & Time & ".csv"
-            'Dim fileName As String = Application.StartupPath & Time & ".csv"
+            'Dim fileName As String = "\\192.168.191.48\Test-Backup$" & "\" & Time & ".csv"
+            Dim fileName As String = Application.StartupPath & Time & ".csv"
 
             exporter.RunExport(fileName)
 
@@ -603,5 +607,6 @@ Public Class FrmAddPO
 
 
     End Sub
+
 
 End Class

@@ -276,6 +276,7 @@ Partial Class FrmDashboard_vb1
         '
         Me.FadingRingWaitingBarIndicatorElement3.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.FadingRingWaitingBarIndicatorElement3.Name = "FadingRingWaitingBarIndicatorElement3"
+        Me.FadingRingWaitingBarIndicatorElement3.Text = " "
         Me.FadingRingWaitingBarIndicatorElement3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.FadingRingWaitingBarIndicatorElement3.UseCompatibleTextRendering = False
         '

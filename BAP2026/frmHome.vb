@@ -13,6 +13,7 @@ Public Class FrmHome
 
     Dim frmpurchaserec As New FrmAddPurchaseReq
 
+    Dim frmviewpo As New FrmViewPO
 
     Public ReadOnly Property SelectedDept As String
 
@@ -73,6 +74,7 @@ Public Class FrmHome
 
         frmaddrec.SelectedDept = listDept.SelectedValue.ToString
         frmpurchaserec.SelectedDept = listDept.SelectedValue.ToString
+        frmviewpo.SelectedDept = listDept.SelectedValue.ToString
 
 
         Dim frm1 As New FrmAddMajorRef()
@@ -80,6 +82,9 @@ Public Class FrmHome
 
         Dim frm2 As New FrmAddPurchaseReq()
         frm2.SelectedDept = listDept.SelectedValue.ToString
+
+        Dim frm3 As New FrmViewPO()
+        frm3.SelectedDept = listDept.SelectedValue.ToString
 
 
         'Dim frm3 As New frmCreateBudget()

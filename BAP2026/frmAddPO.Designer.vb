@@ -22,9 +22,9 @@ Partial Class FrmAddPO
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TableViewDefinition7 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition8 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition9 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition3 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
         Me.RadButton3 = New Telerik.WinControls.UI.RadButton()
         Me.RadGroupBox1 = New Telerik.WinControls.UI.RadGroupBox()
@@ -513,7 +513,7 @@ Partial Class FrmAddPO
         '
         '
         '
-        Me.gvSupplier.MasterTemplate.ViewDefinition = TableViewDefinition7
+        Me.gvSupplier.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.gvSupplier.Name = "gvSupplier"
         Me.gvSupplier.Size = New System.Drawing.Size(989, 211)
         Me.gvSupplier.TabIndex = 2
@@ -555,7 +555,7 @@ Partial Class FrmAddPO
         '
         '
         '
-        Me.gvList.MasterTemplate.ViewDefinition = TableViewDefinition8
+        Me.gvList.MasterTemplate.ViewDefinition = TableViewDefinition2
         Me.gvList.Name = "gvList"
         Me.gvList.Size = New System.Drawing.Size(989, 334)
         Me.gvList.TabIndex = 3
@@ -567,7 +567,7 @@ Partial Class FrmAddPO
         '
         '
         '
-        Me.gvCreatePO.MasterTemplate.ViewDefinition = TableViewDefinition9
+        Me.gvCreatePO.MasterTemplate.ViewDefinition = TableViewDefinition3
         Me.gvCreatePO.Name = "gvCreatePO"
         Me.gvCreatePO.Size = New System.Drawing.Size(1122, 305)
         Me.gvCreatePO.TabIndex = 4

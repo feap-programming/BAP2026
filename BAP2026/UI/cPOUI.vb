@@ -22,17 +22,14 @@ Public Class cPOUI
         gv.ReadOnly = True
         gv.AllowAddNewRow = False
         gv.AllowEditRow = False
-        gv.AllowDeleteRow = False
+        gv.AllowDeleteRow = True
         gv.ShowFilteringRow = True
         gv.EnableAlternatingRowColor = True
         gv.SelectionMode = GridViewSelectionMode.FullRowSelect
-
         gv.EnableFiltering = True
         gv.ShowGroupPanel = False
-
         gv.TableElement.TextAlignment = ContentAlignment.MiddleCenter
         gv.TableElement.RowHeight = 28
-
 
         ' Columns
         Dim sup As New GridViewTextBoxColumn()
@@ -195,9 +192,9 @@ Public Class cPOUI
         gvPO.MasterTemplate.AutoSizeColumnsMode = GridViewAutoSizeColumnsMode.None
         gvPO.MasterTemplate.AllowColumnResize = True
 
-        gvPO.ReadOnly = True
+        gvPO.ReadOnly = False
         gvPO.AllowDeleteRow = False
-        gvPO.AllowEditRow = False
+        gvPO.AllowEditRow = True
         gvPO.AllowAddNewRow = False
         gvPO.ShowFilteringRow = True
         gvPO.EnableAlternatingRowColor = True
@@ -215,6 +212,7 @@ Public Class cPOUI
         fldOBLINE.HeaderText = "OB_LINE"
         fldOBLINE.FieldName = "OB_LINE"
         fldOBLINE.TextAlignment = ContentAlignment.MiddleCenter
+        fldOBLINE.ReadOnly = True
         fldOBLINE.Width = 80
         gvPO.Columns.Add(fldOBLINE)
 
@@ -223,6 +221,7 @@ Public Class cPOUI
         fldDocDate.HeaderText = "Month Ordered"
         fldDocDate.FieldName = "MO"
         fldDocDate.TextAlignment = ContentAlignment.MiddleCenter
+        fldDocDate.ReadOnly = True
         fldDocDate.Width = 150
         gvPO.Columns.Add(fldDocDate)
 
@@ -231,6 +230,7 @@ Public Class cPOUI
         fldTaxDate.HeaderText = "OB_TaxDate"
         fldTaxDate.FieldName = "TaxDate"
         fldTaxDate.TextAlignment = ContentAlignment.MiddleCenter
+        fldTaxDate.ReadOnly = True
         fldTaxDate.Width = 150
         gvPO.Columns.Add(fldTaxDate)
 
@@ -238,6 +238,7 @@ Public Class cPOUI
 
         fldDueDate.HeaderText = "Due Date"
         fldDueDate.FieldName = "DDD"
+        fldDueDate.ReadOnly = True
         fldDueDate.Width = 150
         fldDueDate.TextAlignment = ContentAlignment.MiddleCenter
         gvPO.Columns.Add(fldDueDate)
@@ -245,6 +246,7 @@ Public Class cPOUI
         Dim fldSupppplier As New GridViewTextBoxColumn()
         fldSupppplier.HeaderText = "Supplier"
         fldSupppplier.FieldName = "fldSupplier"
+        fldSupppplier.ReadOnly = True
         fldSupppplier.Width = 180
         fldSupppplier.TextAlignment = ContentAlignment.MiddleCenter
         gvPO.Columns.Add(fldSupppplier)
@@ -253,6 +255,7 @@ Public Class cPOUI
         Dim fldPOAmt As New GridViewTextBoxColumn()
         fldPOAmt.HeaderText = "Total PO Amount"
         fldPOAmt.FieldName = "PO"
+        fldPOAmt.ReadOnly = True
         fldPOAmt.Width = 100
         fldPOAmt.TextAlignment = ContentAlignment.MiddleCenter
         gvPO.Columns.Add(fldPOAmt)
@@ -261,6 +264,7 @@ Public Class cPOUI
         fldRow.HeaderText = "Row"
         fldRow.FieldName = "Row"
         fldRow.Width = 70
+        fldRow.ReadOnly = True
         fldRow.TextAlignment = ContentAlignment.MiddleCenter
         fldRow.IsPinned = PinnedColumnPosition.Left
         fldRow.IsPinned = True
@@ -272,6 +276,7 @@ Public Class cPOUI
         fldItemCode.Width = 80
         fldItemCode.TextAlignment = ContentAlignment.MiddleCenter
         fldItemCode.FormatString = "{0:N6}"
+        fldItemCode.ReadOnly = True
         gvPO.Columns.Add(fldItemCode)
 
         Dim fldQty As New GridViewTextBoxColumn()
@@ -294,12 +299,14 @@ Public Class cPOUI
         fldRemarks.HeaderText = "Remarks"
         fldRemarks.FieldName = "Remarks"
         fldRemarks.Width = 180
+        fldRemarks.ReadOnly = True
         fldRemarks.TextAlignment = ContentAlignment.MiddleCenter
         gvPO.Columns.Add(fldRemarks)
 
         Dim fldDetailID As New GridViewTextBoxColumn()
         fldDetailID.HeaderText = "Detail ID"
         fldDetailID.FieldName = "DetailID"
+        fldDetailID.ReadOnly = True
         fldDetailID.Width = 80
         fldDetailID.TextAlignment = ContentAlignment.MiddleCenter
         gvPO.Columns.Add(fldDetailID)
@@ -307,6 +314,7 @@ Public Class cPOUI
         Dim fldDept As New GridViewTextBoxColumn()
         fldDept.HeaderText = "Department"
         fldDept.FieldName = "fldOrderDepartment"
+        fldDept.ReadOnly = True
         fldDept.Width = 120
         fldDept.TextAlignment = ContentAlignment.MiddleCenter
         gvPO.Columns.Add(fldDept)
@@ -314,6 +322,7 @@ Public Class cPOUI
         Dim fldBudgetRef As New GridViewTextBoxColumn()
         fldBudgetRef.HeaderText = "Budget Ref No."
         fldBudgetRef.FieldName = "fldSubRefNo"
+        fldBudgetRef.ReadOnly = True
         fldBudgetRef.Width = 200
         fldBudgetRef.TextAlignment = ContentAlignment.MiddleCenter
         gvPO.Columns.Add(fldBudgetRef)
@@ -324,6 +333,7 @@ Public Class cPOUI
         fldOrderId.FieldName = "fldOrderId"
         fldOrderId.Width = 80
         fldOrderId.TextAlignment = ContentAlignment.MiddleCenter
+        fldOrderId.ReadOnly = True
         fldOrderId.IsVisible = False
         gvPO.Columns.Add(fldOrderId)
 
@@ -332,6 +342,7 @@ Public Class cPOUI
         fldQTYSOUT.FieldName = "fldQTYSOUT"
         fldQTYSOUT.Width = 90
         fldQTYSOUT.TextAlignment = ContentAlignment.MiddleCenter
+        fldQTYSOUT.ReadOnly = True
         fldQTYSOUT.IsVisible = True
         gvPO.Columns.Add(fldQTYSOUT)
 
@@ -340,12 +351,14 @@ Public Class cPOUI
         fldPRNUM.FieldName = "fldPRNO"
         fldPRNUM.Width = 100
         fldPRNUM.TextAlignment = ContentAlignment.MiddleCenter
+        fldPRNUM.ReadOnly = True
         fldPRNUM.IsVisible = False
         gvPO.Columns.Add(fldPRNUM)
 
         Dim fldMOIID As New GridViewTextBoxColumn()
         fldMOIID.HeaderText = "MOIID"
         fldMOIID.FieldName = "fldMOIID"
+        fldMOIID.ReadOnly = True
         fldMOIID.Width = 90
         fldMOIID.TextAlignment = ContentAlignment.MiddleCenter
         fldMOIID.IsVisible = False
