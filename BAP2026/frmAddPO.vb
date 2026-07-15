@@ -549,8 +549,13 @@ Public Class FrmAddPO
             Dim Time As String = System.DateTime.Now.ToString("ddMMyyyyHHmmss")
             exporter.SummariesExportOption = SummariesOption.DoNotExport
 
+<<<<<<< HEAD
             'Dim fileName As String = "\\192.168.191.48\Test-Backup$" & "\" & Time & ".csv"
             Dim fileName As String = Application.StartupPath & Time & ".csv"
+=======
+            Dim fileName As String = "\\192.168.191.48\Test$" & "\" & Time & ".csv"
+            'Dim fileName As String = Application.StartupPath & Time & ".csv"
+>>>>>>> dd8e9553c8cbff188d3cc22edca5d42994c578ca
 
             exporter.RunExport(fileName)
 
@@ -567,7 +572,8 @@ Public Class FrmAddPO
             '---------'
 
         Catch ex As Exception
-
+            RadMessageBox.SetThemeName("Windows8")
+            RadMessageBox.Show("Error exporting to SAP: " & ex.Message, "Error", MessageBoxButtons.OK, RadMessageIcon.Error)
         End Try
         '----------------------------------------------------------------------
         '----------------------------------------------------

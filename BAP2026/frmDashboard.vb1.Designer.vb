@@ -48,6 +48,7 @@ Partial Class FrmDashboard_vb1
         Dim RadTreeNode24 As Telerik.WinControls.UI.RadTreeNode = New Telerik.WinControls.UI.RadTreeNode()
         Dim RadTreeNode25 As Telerik.WinControls.UI.RadTreeNode = New Telerik.WinControls.UI.RadTreeNode()
         Dim RadTreeNode26 As Telerik.WinControls.UI.RadTreeNode = New Telerik.WinControls.UI.RadTreeNode()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmDashboard_vb1))
         Me.RadCollapsiblePanel1 = New Telerik.WinControls.UI.RadCollapsiblePanel()
         Me.RadPanel1 = New Telerik.WinControls.UI.RadPanel()
         Me.btnexit = New Telerik.WinControls.UI.RadButton()
@@ -320,6 +321,7 @@ Partial Class FrmDashboard_vb1
         Me.ClientSize = New System.Drawing.Size(972, 695)
         Me.Controls.Add(Me.pnlBody)
         Me.Controls.Add(Me.RadCollapsiblePanel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmDashboard_vb1"
         Me.Text = "Dashboard"
         Me.ThemeName = "VisualStudio2022Light"

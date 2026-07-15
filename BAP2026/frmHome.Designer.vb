@@ -22,6 +22,7 @@ Partial Class FrmHome
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmHome))
         Me.txtName = New Telerik.WinControls.UI.RadLabel()
         Me.txtempNo = New Telerik.WinControls.UI.RadLabel()
         Me.txtSection = New Telerik.WinControls.UI.RadLabel()
@@ -283,6 +284,7 @@ Partial Class FrmHome
         Me.ClientSize = New System.Drawing.Size(1193, 560)
         Me.Controls.Add(Me.RadPanel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmHome"
         Me.Text = "FrmHome"
         Me.ThemeName = "VisualStudio2022Light"

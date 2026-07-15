@@ -65,6 +65,9 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>BAP 2026 2.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -575,6 +578,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BAP 2026 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BAP 2026 2.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <ProjectExtensions>
