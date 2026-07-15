@@ -22,6 +22,7 @@ Partial Class FrmLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLogin))
         Me.txtUsername = New Telerik.WinControls.UI.RadButtonTextBox()
         Me.txtPassword = New Telerik.WinControls.UI.RadButtonTextBox()
         Me.VisualStudio2022LightTheme1 = New Telerik.WinControls.Themes.VisualStudio2022LightTheme()
@@ -29,18 +30,18 @@ Partial Class FrmLogin
         Me.RadLabel4 = New Telerik.WinControls.UI.RadLabel()
         Me.MaterialBlueGreyTheme1 = New Telerik.WinControls.Themes.MaterialBlueGreyTheme()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.RadPictureBox1 = New Telerik.WinControls.UI.RadPictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
-        Me.RadPictureBox1 = New Telerik.WinControls.UI.RadPictureBox()
         CType(Me.txtUsername, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtPassword, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         CType(Me.RadPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -92,6 +93,17 @@ Partial Class FrmLogin
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(296, 383)
         Me.Panel1.TabIndex = 102
+        '
+        'RadPictureBox1
+        '
+        Me.RadPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RadPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RadPictureBox1.Image = Global.BAP2026.My.Resources.Resources.BAP_2026_2
+        Me.RadPictureBox1.ImageLayout = Telerik.WinControls.UI.RadImageLayout.Stretch
+        Me.RadPictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.RadPictureBox1.Name = "RadPictureBox1"
+        Me.RadPictureBox1.Size = New System.Drawing.Size(296, 383)
+        Me.RadPictureBox1.TabIndex = 0
         '
         'Panel2
         '
@@ -153,17 +165,6 @@ Partial Class FrmLogin
         Me.IconButton1.TabIndex = 101
         Me.IconButton1.UseVisualStyleBackColor = True
         '
-        'RadPictureBox1
-        '
-        Me.RadPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.RadPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RadPictureBox1.Image = Global.BAP2026.My.Resources.Resources.BAP_2026_2
-        Me.RadPictureBox1.ImageLayout = Telerik.WinControls.UI.RadImageLayout.Stretch
-        Me.RadPictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.RadPictureBox1.Name = "RadPictureBox1"
-        Me.RadPictureBox1.Size = New System.Drawing.Size(296, 383)
-        Me.RadPictureBox1.TabIndex = 0
-        '
         'FrmLogin
         '
         Me.AcceptButton = Me.IconButton3
@@ -173,6 +174,7 @@ Partial Class FrmLogin
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
@@ -182,9 +184,9 @@ Partial Class FrmLogin
         CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        CType(Me.RadPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.RadPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
