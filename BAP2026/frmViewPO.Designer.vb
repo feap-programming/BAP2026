@@ -22,33 +22,45 @@ Partial Class FrmViewPO
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition3 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
+        Me.gvCreatepo = New Telerik.WinControls.UI.RadGridView()
+        Me.RadPanel3 = New Telerik.WinControls.UI.RadPanel()
+        Me.gvPOILIST = New Telerik.WinControls.UI.RadGridView()
+        Me.RadPanel2 = New Telerik.WinControls.UI.RadPanel()
         Me.gvPOLIST = New Telerik.WinControls.UI.RadGridView()
         Me.RadScrollablePanel2 = New Telerik.WinControls.UI.RadScrollablePanel()
+        Me.RadLabel15 = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBox1 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.btnCancel = New Telerik.WinControls.UI.RadButton()
+        Me.RadLabel14 = New Telerik.WinControls.UI.RadLabel()
+        Me.tbcCancelClosePO = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.btnClose = New Telerik.WinControls.UI.RadButton()
+        Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
+        Me.tbcRemarks = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
-        Me.RadMaskedEditBox4 = New Telerik.WinControls.UI.RadMaskedEditBox()
+        Me.MEBTOTAL = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.RadLabel13 = New Telerik.WinControls.UI.RadLabel()
         Me.ddlDept = New Telerik.WinControls.UI.RadDropDownList()
-        Me.RadMaskedEditBox3 = New Telerik.WinControls.UI.RadMaskedEditBox()
+        Me.MEBPrice = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.RadLabel2 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel11 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel12 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadMaskedEditBox2 = New Telerik.WinControls.UI.RadMaskedEditBox()
+        Me.MEBDISC = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.RadLabel10 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel9 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadMaskedEditBox1 = New Telerik.WinControls.UI.RadMaskedEditBox()
+        Me.MEBTPO = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.RadLabel8 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel7 = New Telerik.WinControls.UI.RadLabel()
         Me.dtDD = New Telerik.WinControls.UI.RadDateTimePicker()
         Me.dtMO = New Telerik.WinControls.UI.RadDateTimePicker()
-        Me.RadTextBox3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.tbCurrency = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel6 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBox2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.tbVendor = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel5 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBox1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.tbSup = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel4 = New Telerik.WinControls.UI.RadLabel()
         Me.ddYear = New Telerik.WinControls.UI.RadDropDownList()
         Me.ddMonth = New Telerik.WinControls.UI.RadDropDownList()
@@ -57,47 +69,55 @@ Partial Class FrmViewPO
         Me.TelerikMetroTheme1 = New Telerik.WinControls.Themes.TelerikMetroTheme()
         Me.Windows11Theme1 = New Telerik.WinControls.Themes.Windows11Theme()
         Me.Windows11CompactTheme1 = New Telerik.WinControls.Themes.Windows11CompactTheme()
-        Me.RadPanel2 = New Telerik.WinControls.UI.RadPanel()
-        Me.gvPOILIST = New Telerik.WinControls.UI.RadGridView()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
+        CType(Me.gvCreatepo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvCreatepo.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadPanel3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvPOILIST, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvPOILIST.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadPanel2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gvPOLIST, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gvPOLIST.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadScrollablePanel2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel2.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel2.SuspendLayout()
+        CType(Me.RadLabel15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox1.SuspendLayout()
+        CType(Me.btnCancel, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tbcCancelClosePO, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnClose, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tbcRemarks, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadMaskedEditBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MEBTOTAL, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ddlDept, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadMaskedEditBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MEBPrice, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel12, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadMaskedEditBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MEBDISC, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadMaskedEditBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MEBTPO, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtDD, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtMO, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tbCurrency, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tbVendor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tbSup, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ddYear, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ddMonth, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadPanel2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.gvPOILIST, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.gvPOILIST.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -109,14 +129,57 @@ Partial Class FrmViewPO
         '
         'RadScrollablePanel1.PanelContainer
         '
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.gvCreatepo)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadPanel3)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.gvPOILIST)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadPanel2)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.gvPOLIST)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadScrollablePanel2)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadPanel1)
-        Me.RadScrollablePanel1.PanelContainer.Size = New System.Drawing.Size(982, 566)
-        Me.RadScrollablePanel1.Size = New System.Drawing.Size(1001, 568)
+        Me.RadScrollablePanel1.PanelContainer.Size = New System.Drawing.Size(982, 745)
+        Me.RadScrollablePanel1.Size = New System.Drawing.Size(1001, 747)
         Me.RadScrollablePanel1.TabIndex = 2
+        '
+        'gvCreatepo
+        '
+        Me.gvCreatepo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.gvCreatepo.Location = New System.Drawing.Point(450, 1076)
+        '
+        '
+        '
+        Me.gvCreatepo.MasterTemplate.ViewDefinition = TableViewDefinition1
+        Me.gvCreatepo.Name = "gvCreatepo"
+        Me.gvCreatepo.Size = New System.Drawing.Size(532, 0)
+        Me.gvCreatepo.TabIndex = 9
+        Me.gvCreatepo.Visible = False
+        '
+        'RadPanel3
+        '
+        Me.RadPanel3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.RadPanel3.Location = New System.Drawing.Point(450, 1018)
+        Me.RadPanel3.Name = "RadPanel3"
+        Me.RadPanel3.Size = New System.Drawing.Size(532, 58)
+        Me.RadPanel3.TabIndex = 8
+        '
+        'gvPOILIST
+        '
+        Me.gvPOILIST.Dock = System.Windows.Forms.DockStyle.Top
+        Me.gvPOILIST.Location = New System.Drawing.Point(450, 538)
+        '
+        '
+        '
+        Me.gvPOILIST.MasterTemplate.ViewDefinition = TableViewDefinition2
+        Me.gvPOILIST.Name = "gvPOILIST"
+        Me.gvPOILIST.Size = New System.Drawing.Size(532, 480)
+        Me.gvPOILIST.TabIndex = 7
+        '
+        'RadPanel2
+        '
+        Me.RadPanel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.RadPanel2.Location = New System.Drawing.Point(450, 480)
+        Me.RadPanel2.Name = "RadPanel2"
+        Me.RadPanel2.Size = New System.Drawing.Size(532, 58)
+        Me.RadPanel2.TabIndex = 6
         '
         'gvPOLIST
         '
@@ -125,9 +188,9 @@ Partial Class FrmViewPO
         '
         '
         '
-        Me.gvPOLIST.MasterTemplate.ViewDefinition = TableViewDefinition2
+        Me.gvPOLIST.MasterTemplate.ViewDefinition = TableViewDefinition3
         Me.gvPOLIST.Name = "gvPOLIST"
-        Me.gvPOLIST.Size = New System.Drawing.Size(532, 208)
+        Me.gvPOLIST.Size = New System.Drawing.Size(532, 480)
         Me.gvPOLIST.TabIndex = 5
         '
         'RadScrollablePanel2
@@ -139,36 +202,52 @@ Partial Class FrmViewPO
         '
         'RadScrollablePanel2.PanelContainer
         '
+        Me.RadScrollablePanel2.PanelContainer.Controls.Add(Me.RadLabel15)
         Me.RadScrollablePanel2.PanelContainer.Controls.Add(Me.RadGroupBox1)
-        Me.RadScrollablePanel2.PanelContainer.Size = New System.Drawing.Size(431, 503)
-        Me.RadScrollablePanel2.Size = New System.Drawing.Size(450, 505)
+        Me.RadScrollablePanel2.PanelContainer.Size = New System.Drawing.Size(431, 1074)
+        Me.RadScrollablePanel2.Size = New System.Drawing.Size(450, 1076)
         Me.RadScrollablePanel2.TabIndex = 4
         Me.RadScrollablePanel2.ThemeName = "TelerikMetro"
+        '
+        'RadLabel15
+        '
+        Me.RadLabel15.Location = New System.Drawing.Point(10, 721)
+        Me.RadLabel15.Name = "RadLabel15"
+        Me.RadLabel15.Size = New System.Drawing.Size(112, 22)
+        Me.RadLabel15.TabIndex = 414
+        Me.RadLabel15.Text = "Cancel/Close PO"
+        Me.RadLabel15.ThemeName = "Windows11"
         '
         'RadGroupBox1
         '
         Me.RadGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBox1.Controls.Add(Me.btnCancel)
+        Me.RadGroupBox1.Controls.Add(Me.RadLabel14)
+        Me.RadGroupBox1.Controls.Add(Me.tbcCancelClosePO)
+        Me.RadGroupBox1.Controls.Add(Me.btnClose)
+        Me.RadGroupBox1.Controls.Add(Me.RadLabel1)
+        Me.RadGroupBox1.Controls.Add(Me.tbcRemarks)
         Me.RadGroupBox1.Controls.Add(Me.RadButton1)
-        Me.RadGroupBox1.Controls.Add(Me.RadMaskedEditBox4)
+        Me.RadGroupBox1.Controls.Add(Me.MEBTOTAL)
         Me.RadGroupBox1.Controls.Add(Me.RadLabel13)
         Me.RadGroupBox1.Controls.Add(Me.ddlDept)
-        Me.RadGroupBox1.Controls.Add(Me.RadMaskedEditBox3)
+        Me.RadGroupBox1.Controls.Add(Me.MEBPrice)
         Me.RadGroupBox1.Controls.Add(Me.RadLabel2)
         Me.RadGroupBox1.Controls.Add(Me.RadLabel11)
         Me.RadGroupBox1.Controls.Add(Me.RadLabel12)
-        Me.RadGroupBox1.Controls.Add(Me.RadMaskedEditBox2)
+        Me.RadGroupBox1.Controls.Add(Me.MEBDISC)
         Me.RadGroupBox1.Controls.Add(Me.RadLabel10)
         Me.RadGroupBox1.Controls.Add(Me.RadLabel9)
-        Me.RadGroupBox1.Controls.Add(Me.RadMaskedEditBox1)
+        Me.RadGroupBox1.Controls.Add(Me.MEBTPO)
         Me.RadGroupBox1.Controls.Add(Me.RadLabel8)
         Me.RadGroupBox1.Controls.Add(Me.RadLabel7)
         Me.RadGroupBox1.Controls.Add(Me.dtDD)
         Me.RadGroupBox1.Controls.Add(Me.dtMO)
-        Me.RadGroupBox1.Controls.Add(Me.RadTextBox3)
+        Me.RadGroupBox1.Controls.Add(Me.tbCurrency)
         Me.RadGroupBox1.Controls.Add(Me.RadLabel6)
-        Me.RadGroupBox1.Controls.Add(Me.RadTextBox2)
+        Me.RadGroupBox1.Controls.Add(Me.tbVendor)
         Me.RadGroupBox1.Controls.Add(Me.RadLabel5)
-        Me.RadGroupBox1.Controls.Add(Me.RadTextBox1)
+        Me.RadGroupBox1.Controls.Add(Me.tbSup)
         Me.RadGroupBox1.Controls.Add(Me.RadLabel4)
         Me.RadGroupBox1.Controls.Add(Me.ddYear)
         Me.RadGroupBox1.Controls.Add(Me.ddMonth)
@@ -181,6 +260,54 @@ Partial Class FrmViewPO
         Me.RadGroupBox1.Text = "Purchase Order List"
         Me.RadGroupBox1.ThemeName = "TelerikMetro"
         '
+        'btnCancel
+        '
+        Me.btnCancel.Location = New System.Drawing.Point(287, 967)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(110, 24)
+        Me.btnCancel.TabIndex = 417
+        Me.btnCancel.Text = "Cancel" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
+        'RadLabel14
+        '
+        Me.RadLabel14.Location = New System.Drawing.Point(5, 690)
+        Me.RadLabel14.Name = "RadLabel14"
+        Me.RadLabel14.Size = New System.Drawing.Size(83, 22)
+        Me.RadLabel14.TabIndex = 414
+        Me.RadLabel14.Text = "Remarks for"
+        Me.RadLabel14.ThemeName = "Windows11"
+        '
+        'tbcCancelClosePO
+        '
+        Me.tbcCancelClosePO.Location = New System.Drawing.Point(112, 667)
+        Me.tbcCancelClosePO.Name = "tbcCancelClosePO"
+        Me.tbcCancelClosePO.Size = New System.Drawing.Size(301, 139)
+        Me.tbcCancelClosePO.TabIndex = 416
+        '
+        'btnClose
+        '
+        Me.btnClose.Location = New System.Drawing.Point(283, 909)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(110, 24)
+        Me.btnClose.TabIndex = 416
+        Me.btnClose.Text = "Close"
+        '
+        'RadLabel1
+        '
+        Me.RadLabel1.Location = New System.Drawing.Point(5, 523)
+        Me.RadLabel1.Name = "RadLabel1"
+        Me.RadLabel1.Size = New System.Drawing.Size(61, 22)
+        Me.RadLabel1.TabIndex = 413
+        Me.RadLabel1.Text = "Remarks"
+        Me.RadLabel1.ThemeName = "Windows11"
+        '
+        'tbcRemarks
+        '
+        Me.tbcRemarks.Location = New System.Drawing.Point(112, 504)
+        Me.tbcRemarks.Name = "tbcRemarks"
+        Me.tbcRemarks.Size = New System.Drawing.Size(301, 139)
+        Me.tbcRemarks.TabIndex = 415
+        '
         'RadButton1
         '
         Me.RadButton1.Location = New System.Drawing.Point(379, 18)
@@ -189,14 +316,15 @@ Partial Class FrmViewPO
         Me.RadButton1.TabIndex = 414
         Me.RadButton1.Text = "GO"
         '
-        'RadMaskedEditBox4
+        'MEBTOTAL
         '
-        Me.RadMaskedEditBox4.Location = New System.Drawing.Point(112, 459)
-        Me.RadMaskedEditBox4.Name = "RadMaskedEditBox4"
-        Me.RadMaskedEditBox4.Size = New System.Drawing.Size(301, 24)
-        Me.RadMaskedEditBox4.TabIndex = 413
-        Me.RadMaskedEditBox4.TabStop = False
-        Me.RadMaskedEditBox4.ThemeName = "TelerikMetro"
+        Me.MEBTOTAL.Location = New System.Drawing.Point(112, 459)
+        Me.MEBTOTAL.Name = "MEBTOTAL"
+        Me.MEBTOTAL.ReadOnly = True
+        Me.MEBTOTAL.Size = New System.Drawing.Size(301, 24)
+        Me.MEBTOTAL.TabIndex = 413
+        Me.MEBTOTAL.TabStop = False
+        Me.MEBTOTAL.ThemeName = "TelerikMetro"
         '
         'RadLabel13
         '
@@ -217,14 +345,15 @@ Partial Class FrmViewPO
         Me.ddlDept.TabIndex = 396
         Me.ddlDept.ThemeName = "TelerikMetro"
         '
-        'RadMaskedEditBox3
+        'MEBPrice
         '
-        Me.RadMaskedEditBox3.Location = New System.Drawing.Point(112, 419)
-        Me.RadMaskedEditBox3.Name = "RadMaskedEditBox3"
-        Me.RadMaskedEditBox3.Size = New System.Drawing.Size(301, 24)
-        Me.RadMaskedEditBox3.TabIndex = 411
-        Me.RadMaskedEditBox3.TabStop = False
-        Me.RadMaskedEditBox3.ThemeName = "TelerikMetro"
+        Me.MEBPrice.Location = New System.Drawing.Point(112, 419)
+        Me.MEBPrice.Name = "MEBPrice"
+        Me.MEBPrice.ReadOnly = True
+        Me.MEBPrice.Size = New System.Drawing.Size(301, 24)
+        Me.MEBPrice.TabIndex = 411
+        Me.MEBPrice.TabStop = False
+        Me.MEBPrice.ThemeName = "TelerikMetro"
         '
         'RadLabel2
         '
@@ -253,14 +382,15 @@ Partial Class FrmViewPO
         Me.RadLabel12.Text = "Price"
         Me.RadLabel12.ThemeName = "Windows11"
         '
-        'RadMaskedEditBox2
+        'MEBDISC
         '
-        Me.RadMaskedEditBox2.Location = New System.Drawing.Point(112, 380)
-        Me.RadMaskedEditBox2.Name = "RadMaskedEditBox2"
-        Me.RadMaskedEditBox2.Size = New System.Drawing.Size(301, 24)
-        Me.RadMaskedEditBox2.TabIndex = 409
-        Me.RadMaskedEditBox2.TabStop = False
-        Me.RadMaskedEditBox2.ThemeName = "TelerikMetro"
+        Me.MEBDISC.Location = New System.Drawing.Point(112, 380)
+        Me.MEBDISC.Name = "MEBDISC"
+        Me.MEBDISC.ReadOnly = True
+        Me.MEBDISC.Size = New System.Drawing.Size(301, 24)
+        Me.MEBDISC.TabIndex = 409
+        Me.MEBDISC.TabStop = False
+        Me.MEBDISC.ThemeName = "TelerikMetro"
         '
         'RadLabel10
         '
@@ -280,14 +410,15 @@ Partial Class FrmViewPO
         Me.RadLabel9.Text = "Total PO"
         Me.RadLabel9.ThemeName = "Windows11"
         '
-        'RadMaskedEditBox1
+        'MEBTPO
         '
-        Me.RadMaskedEditBox1.Location = New System.Drawing.Point(112, 342)
-        Me.RadMaskedEditBox1.Name = "RadMaskedEditBox1"
-        Me.RadMaskedEditBox1.Size = New System.Drawing.Size(301, 24)
-        Me.RadMaskedEditBox1.TabIndex = 408
-        Me.RadMaskedEditBox1.TabStop = False
-        Me.RadMaskedEditBox1.ThemeName = "TelerikMetro"
+        Me.MEBTPO.Location = New System.Drawing.Point(112, 342)
+        Me.MEBTPO.Name = "MEBTPO"
+        Me.MEBTPO.ReadOnly = True
+        Me.MEBTPO.Size = New System.Drawing.Size(301, 24)
+        Me.MEBTPO.TabIndex = 408
+        Me.MEBTPO.TabStop = False
+        Me.MEBTPO.ThemeName = "TelerikMetro"
         '
         'RadLabel8
         '
@@ -311,6 +442,7 @@ Partial Class FrmViewPO
         '
         Me.dtDD.Location = New System.Drawing.Point(112, 302)
         Me.dtDD.Name = "dtDD"
+        Me.dtDD.ReadOnly = True
         Me.dtDD.Size = New System.Drawing.Size(301, 24)
         Me.dtDD.TabIndex = 407
         Me.dtDD.TabStop = False
@@ -322,6 +454,7 @@ Partial Class FrmViewPO
         '
         Me.dtMO.Location = New System.Drawing.Point(112, 265)
         Me.dtMO.Name = "dtMO"
+        Me.dtMO.ReadOnly = True
         Me.dtMO.Size = New System.Drawing.Size(301, 24)
         Me.dtMO.TabIndex = 405
         Me.dtMO.TabStop = False
@@ -329,13 +462,14 @@ Partial Class FrmViewPO
         Me.dtMO.ThemeName = "TelerikMetro"
         Me.dtMO.Value = New Date(2026, 7, 8, 14, 10, 4, 762)
         '
-        'RadTextBox3
+        'tbCurrency
         '
-        Me.RadTextBox3.Location = New System.Drawing.Point(112, 224)
-        Me.RadTextBox3.Name = "RadTextBox3"
-        Me.RadTextBox3.Size = New System.Drawing.Size(301, 24)
-        Me.RadTextBox3.TabIndex = 404
-        Me.RadTextBox3.ThemeName = "TelerikMetro"
+        Me.tbCurrency.Location = New System.Drawing.Point(112, 224)
+        Me.tbCurrency.Name = "tbCurrency"
+        Me.tbCurrency.ReadOnly = True
+        Me.tbCurrency.Size = New System.Drawing.Size(301, 24)
+        Me.tbCurrency.TabIndex = 404
+        Me.tbCurrency.ThemeName = "TelerikMetro"
         '
         'RadLabel6
         '
@@ -346,13 +480,14 @@ Partial Class FrmViewPO
         Me.RadLabel6.Text = "Currency"
         Me.RadLabel6.ThemeName = "Windows11"
         '
-        'RadTextBox2
+        'tbVendor
         '
-        Me.RadTextBox2.Location = New System.Drawing.Point(112, 184)
-        Me.RadTextBox2.Name = "RadTextBox2"
-        Me.RadTextBox2.Size = New System.Drawing.Size(301, 24)
-        Me.RadTextBox2.TabIndex = 402
-        Me.RadTextBox2.ThemeName = "TelerikMetro"
+        Me.tbVendor.Location = New System.Drawing.Point(112, 184)
+        Me.tbVendor.Name = "tbVendor"
+        Me.tbVendor.ReadOnly = True
+        Me.tbVendor.Size = New System.Drawing.Size(301, 24)
+        Me.tbVendor.TabIndex = 402
+        Me.tbVendor.ThemeName = "TelerikMetro"
         '
         'RadLabel5
         '
@@ -363,13 +498,14 @@ Partial Class FrmViewPO
         Me.RadLabel5.Text = "Vendor Code"
         Me.RadLabel5.ThemeName = "Windows11"
         '
-        'RadTextBox1
+        'tbSup
         '
-        Me.RadTextBox1.Location = New System.Drawing.Point(112, 144)
-        Me.RadTextBox1.Name = "RadTextBox1"
-        Me.RadTextBox1.Size = New System.Drawing.Size(301, 24)
-        Me.RadTextBox1.TabIndex = 400
-        Me.RadTextBox1.ThemeName = "TelerikMetro"
+        Me.tbSup.Location = New System.Drawing.Point(112, 144)
+        Me.tbSup.Name = "tbSup"
+        Me.tbSup.ReadOnly = True
+        Me.tbSup.Size = New System.Drawing.Size(301, 24)
+        Me.tbSup.TabIndex = 400
+        Me.tbSup.ThemeName = "TelerikMetro"
         '
         'RadLabel4
         '
@@ -412,36 +548,16 @@ Partial Class FrmViewPO
         'RadPanel1
         '
         Me.RadPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.RadPanel1.Location = New System.Drawing.Point(0, 505)
+        Me.RadPanel1.Location = New System.Drawing.Point(0, 1076)
         Me.RadPanel1.Name = "RadPanel1"
         Me.RadPanel1.Size = New System.Drawing.Size(982, 100)
         Me.RadPanel1.TabIndex = 2
-        '
-        'RadPanel2
-        '
-        Me.RadPanel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.RadPanel2.Location = New System.Drawing.Point(450, 208)
-        Me.RadPanel2.Name = "RadPanel2"
-        Me.RadPanel2.Size = New System.Drawing.Size(532, 58)
-        Me.RadPanel2.TabIndex = 6
-        '
-        'gvPOILIST
-        '
-        Me.gvPOILIST.Dock = System.Windows.Forms.DockStyle.Top
-        Me.gvPOILIST.Location = New System.Drawing.Point(450, 266)
-        '
-        '
-        '
-        Me.gvPOILIST.MasterTemplate.ViewDefinition = TableViewDefinition1
-        Me.gvPOILIST.Name = "gvPOILIST"
-        Me.gvPOILIST.Size = New System.Drawing.Size(532, 239)
-        Me.gvPOILIST.TabIndex = 7
         '
         'FrmViewPO
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1001, 568)
+        Me.ClientSize = New System.Drawing.Size(1001, 747)
         Me.Controls.Add(Me.RadScrollablePanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmViewPO"
@@ -449,43 +565,54 @@ Partial Class FrmViewPO
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadScrollablePanel1.ResumeLayout(False)
+        CType(Me.gvCreatepo.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvCreatepo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadPanel3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvPOILIST.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvPOILIST, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadPanel2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gvPOLIST.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gvPOLIST, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadScrollablePanel2.PanelContainer.ResumeLayout(False)
+        Me.RadScrollablePanel2.PanelContainer.PerformLayout()
         CType(Me.RadScrollablePanel2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadScrollablePanel2.ResumeLayout(False)
+        CType(Me.RadLabel15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox1.ResumeLayout(False)
         Me.RadGroupBox1.PerformLayout()
+        CType(Me.btnCancel, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tbcCancelClosePO, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnClose, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tbcRemarks, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadMaskedEditBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MEBTOTAL, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ddlDept, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadMaskedEditBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MEBPrice, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel12, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadMaskedEditBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MEBDISC, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadMaskedEditBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MEBTPO, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtDD, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtMO, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tbCurrency, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tbVendor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tbSup, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ddYear, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ddMonth, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadPanel2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.gvPOILIST.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.gvPOILIST, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -503,28 +630,37 @@ Partial Class FrmViewPO
     Friend WithEvents Windows11Theme1 As Telerik.WinControls.Themes.Windows11Theme
     Friend WithEvents Windows11CompactTheme1 As Telerik.WinControls.Themes.Windows11CompactTheme
     Friend WithEvents ddYear As Telerik.WinControls.UI.RadDropDownList
-    Friend WithEvents RadTextBox1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents tbSup As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel4 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBox3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents tbCurrency As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel6 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBox2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents tbVendor As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel5 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel8 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel7 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents dtDD As Telerik.WinControls.UI.RadDateTimePicker
     Friend WithEvents dtMO As Telerik.WinControls.UI.RadDateTimePicker
     Friend WithEvents RadLabel9 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadMaskedEditBox1 As Telerik.WinControls.UI.RadMaskedEditBox
-    Friend WithEvents RadMaskedEditBox3 As Telerik.WinControls.UI.RadMaskedEditBox
+    Friend WithEvents MEBTPO As Telerik.WinControls.UI.RadMaskedEditBox
+    Friend WithEvents MEBPrice As Telerik.WinControls.UI.RadMaskedEditBox
     Friend WithEvents RadLabel11 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel12 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadMaskedEditBox2 As Telerik.WinControls.UI.RadMaskedEditBox
+    Friend WithEvents MEBDISC As Telerik.WinControls.UI.RadMaskedEditBox
     Friend WithEvents RadLabel10 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadMaskedEditBox4 As Telerik.WinControls.UI.RadMaskedEditBox
+    Friend WithEvents MEBTOTAL As Telerik.WinControls.UI.RadMaskedEditBox
     Friend WithEvents RadLabel13 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents gvPOLIST As Telerik.WinControls.UI.RadGridView
     Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
     Friend WithEvents gvPOILIST As Telerik.WinControls.UI.RadGridView
     Friend WithEvents RadPanel2 As Telerik.WinControls.UI.RadPanel
+    Friend WithEvents gvCreatepo As Telerik.WinControls.UI.RadGridView
+    Friend WithEvents RadPanel3 As Telerik.WinControls.UI.RadPanel
+    Friend WithEvents RadLabel1 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents tbcRemarks As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents btnClose As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadLabel15 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents RadLabel14 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents tbcCancelClosePO As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents btnCancel As Telerik.WinControls.UI.RadButton
 End Class
 

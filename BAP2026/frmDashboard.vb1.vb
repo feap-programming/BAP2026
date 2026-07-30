@@ -13,7 +13,7 @@ Public Class FrmDashboard_vb1
 
     Dim frmbcdudget As New frmCreateBudget
 
-
+    Dim frmViewPO As New FrmNew_Purchase_Requisition
 
 
     Private Sub ShowLoading()
@@ -263,6 +263,15 @@ Public Class FrmDashboard_vb1
                     frmaddPO.SelectedDept = frmhome.SelectedDept
 
                     LoadingForm(frmaddPO)
+
+
+                Case "nodeViewRequisition"
+                    Dim frmviewpo As New FrmNew_Purchase_Requisition
+                    frmviewpo.SelectedDept = frmhome.SelectedDept
+
+                    LoadingForm(frmviewpo)
+
+
             End Select
 
         Else
@@ -275,6 +284,8 @@ Public Class FrmDashboard_vb1
 
     Private Sub btnhome_Click(sender As Object, e As EventArgs) Handles btnhome.Click
 
+
+
         frmhome = New FrmHome()
 
         openchildform.openChildform(frmhome, pnlBody)
@@ -282,10 +293,6 @@ Public Class FrmDashboard_vb1
     End Sub
 
     Private Sub btnexit_Click(sender As Object, e As EventArgs) Handles btnexit.Click
-
-
-
-
 
 
 

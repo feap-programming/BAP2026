@@ -41,6 +41,10 @@ Public Class FrmAddPO
 
     Dim cCreatePOI As New cAddPOI
 
+    Dim cSelectAllITEMTOPO As New cSelectAllItemtoPO
+
+    Dim dtSelectAllItemtoPO As DataTable
+
     Private Sub FrmAddPO_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
@@ -87,6 +91,9 @@ Public Class FrmAddPO
         dtpDD.Value = "01/01/0001"
 
         tbSignature.Text = GlobalVariables.SelectedDept & "-" & GlobalVariables.empFirstName & GlobalVariables.empMiddleName & "-" & GlobalVariables.empLastName
+
+        selectAllItemToPO()
+
 
     End Function
     Public Property SelectedDept As String
@@ -329,7 +336,9 @@ Public Class FrmAddPO
         If dtpDD.Text Is Nothing Then
             RadMessageBox.SetThemeName("Windows8")
             RadMessageBox.Show("Please Select Delivery Date to Continue.", "Notification", MessageBoxButtons.OK, RadMessageIcon.Info)
+
             Exit Sub
+
         End If
 
         Dim dt As DataTable
@@ -374,7 +383,9 @@ Public Class FrmAddPO
         Dim OB_Detail_ID As String = ""
         Dim OB_Dept As String = gvList.CurrentRow.Cells("fldOrderDepartment").Value.ToString
         Dim OB_BudgetRef As String = gvList.CurrentRow.Cells("fldSubRefNo").Value.ToString
-        Dim OrdID As Integer = Convert.ToInt32(gvList.CurrentRow.Cells("fldOrderId").Value)
+
+        Dim OrdID As Integer = If(IsDBNull(gvList.CurrentRow.Cells("fldOrderId").Value), 0, Convert.ToInt32(gvList.CurrentRow.Cells("fldOrderId").Value))
+
         Dim QTYOUT As String = gvList.CurrentRow.Cells("fldQTYSOUT").Value.ToString
         Dim PRNum As String = gvList.CurrentRow.Cells("fldPRNO").Value.ToString
         Dim MOID As String = gvList.CurrentRow.Cells("fldMOIID").Value.ToString
@@ -475,6 +486,17 @@ Public Class FrmAddPO
 
     Private Sub btnPO_Click(sender As Object, e As EventArgs) Handles btnPO.Click
 
+
+        If gvCreatePO.Rows.Count = 0 Then
+            RadMessageBox.SetThemeName("Windows8")
+            RadMessageBox.Show("Please add at least one item before creating a Purchase Order.",
+                               "No Items",
+                               MessageBoxButtons.OK,
+                               RadMessageIcon.Exclamation)
+            Exit Sub
+        End If
+
+
         Dim venCode As String = VCdd.Text
         Dim remarks As String = tbcRemakrs.Text
 
@@ -482,6 +504,8 @@ Public Class FrmAddPO
         pCurrency:=tbCurrency.Text, pDiscount:=Convert.ToDecimal(mebDISC.Value), pDAmount:=Convert.ToDecimal(mebPrice.Value),
         pPTO:=Convert.ToDecimal(MEBTPO.Value), pPOAmt:=Convert.ToDecimal(mebTotal.Value), pRemarks:=remarks, pSignature:=tbSignature.Text,
         pRate:=Convert.ToDecimal(mebRate.Value))
+
+
 
         For y As Integer = 0 To gvCreatePO.ChildRows.Count - 1
             gvCreatePO.ChildRows(y).Cells("OB_LINE").Value = chik
@@ -496,8 +520,6 @@ Public Class FrmAddPO
 
         '---------------------AddPOI---------------------
         For x As Integer = 0 To gvCreatePO.ChildRows.Count - 1
-
-
 
 
             Dim UP As Decimal = Convert.ToDecimal(gvCreatePO.ChildRows(x).Cells("Price").Value)
@@ -549,13 +571,13 @@ Public Class FrmAddPO
             Dim Time As String = System.DateTime.Now.ToString("ddMMyyyyHHmmss")
             exporter.SummariesExportOption = SummariesOption.DoNotExport
 
-<<<<<<< HEAD
+
             'Dim fileName As String = "\\192.168.191.48\Test-Backup$" & "\" & Time & ".csv"
-            Dim fileName As String = Application.StartupPath & Time & ".csv"
-=======
+            'Dim fileName As String = Application.StartupPath & Time & ".csv"
+
             Dim fileName As String = "\\192.168.191.48\Test$" & "\" & Time & ".csv"
             'Dim fileName As String = Application.StartupPath & Time & ".csv"
->>>>>>> dd8e9553c8cbff188d3cc22edca5d42994c578ca
+
 
             exporter.RunExport(fileName)
 
@@ -610,6 +632,51 @@ Public Class FrmAddPO
 
         'End Try
         '------------------------------------------------
+
+
+    End Sub
+
+    Private Sub selectAllItemToPO()
+
+        dtSelectAllItemtoPO = cSelectAllITEMTOPO.cSelectAllItemPO()
+
+        If dtSelectAllItemtoPO IsNot Nothing AndAlso dtSelectAllItemtoPO.Rows.Count > 0 Then
+
+            With gvList
+
+                .BeginUpdate()
+                .DataSource = dtSelectAllItemtoPO
+                .EndUpdate()
+
+            End With
+
+
+        End If
+
+
+    End Sub
+
+    'Private Sub fetchbtnSirts(PRNO As String)
+
+    '    dtItemPO = cItemPO.getItemPObyPRNO(PRNO)
+
+    '    If dtItemPO IsNot Nothing AndAlso dtItemPO.Rows.Count > 0 Then
+
+    '        With gvList
+    '            .BeginUpdate()
+    '            .DataSource = dtItemPO
+    '            .EndUpdate()
+
+    '        End With
+
+    '    End If
+
+    'End Sub
+
+    Private Sub btnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
+
+
+        selectAllItemToPO()
 
 
     End Sub

@@ -52,19 +52,32 @@ Public Class cVPOUI
         fldIndexColumn.TextAlignment = ContentAlignment.MiddleCenter
         fldIndexColumn.HeaderTextAlignment = ContentAlignment.MiddleCenter
         fldIndexColumn.Width = 100
+        fldIndexColumn.IsVisible = False
         fldIndexColumn.PinPosition = PinnedColumnPosition.Left
         fldIndexColumn.IsPinned = True
         GV.Columns.Add(fldIndexColumn)
 
-        Dim fldPONumberColumn As New GridViewTextBoxColumn()
-        fldPONumberColumn.HeaderText = "PO Number"
-        fldPONumberColumn.FieldName = "PO"
-        fldPONumberColumn.TextAlignment = ContentAlignment.MiddleCenter
-        fldPONumberColumn.HeaderTextAlignment = ContentAlignment.MiddleCenter
-        fldPONumberColumn.Width = 100
-        GV.Columns.Add(fldPONumberColumn)
+        Dim fldDocNum As New GridViewTextBoxColumn()
+        fldDocNum.HeaderText = "PO Number"
+        fldDocNum.FieldName = "DocNum"
+        fldDocNum.TextAlignment = ContentAlignment.MiddleCenter
+        fldDocNum.HeaderTextAlignment = ContentAlignment.MiddleCenter
+        fldDocNum.IsVisible = True
+        fldDocNum.Width = 100
+        GV.Columns.Add(fldDocNum)
+
+
+        'Dim fldPONumberColumn As New GridViewTextBoxColumn()
+        'fldPONumberColumn.HeaderText = "PO Number"
+        'fldPONumberColumn.FieldName = "PO"
+        'fldPONumberColumn.TextAlignment = ContentAlignment.MiddleCenter
+        'fldPONumberColumn.HeaderTextAlignment = ContentAlignment.MiddleCenter
+        'fldPOIDColumn.IsVisible = False
+        'fldPONumberColumn.Width = 100
+        'GV.Columns.Add(fldPONumberColumn)
 
         Dim fldOBLINE As New GridViewTextBoxColumn()
+        fldOBLINE.Name = "OB_LINE"
         fldOBLINE.HeaderText = "OB LINE"
         fldOBLINE.FieldName = "OB_LINE"
         fldOBLINE.TextAlignment = ContentAlignment.MiddleCenter
@@ -100,7 +113,7 @@ Public Class cVPOUI
 
         Dim fldDateColumn As New GridViewDateTimeColumn()
         fldDateColumn.HeaderText = "Delivery Date"
-        fldDateColumn.FieldName = "fldDate"
+        fldDateColumn.FieldName = "fldDDate"
         fldDateColumn.ReadOnly = True
         fldDateColumn.TextAlignment = ContentAlignment.MiddleCenter
         fldDateColumn.HeaderTextAlignment = ContentAlignment.MiddleCenter
@@ -133,7 +146,7 @@ Public Class cVPOUI
         GV.Columns.Add(fldTPOColumn)
 
         Dim OB_POAmtColumn As New GridViewDecimalColumn()
-        OB_POAmtColumn.HeaderText = "Total PO Amount "
+        OB_POAmtColumn.HeaderText = "Total PO With Discount"
         OB_POAmtColumn.FieldName = "OB_POAmt"
         OB_POAmtColumn.ReadOnly = True
         OB_POAmtColumn.HeaderTextAlignment = ContentAlignment.MiddleCenter
@@ -237,6 +250,7 @@ Public Class cVPOUI
         fldPONumberColumn.HeaderText = "PO NUMBER"
         fldPONumberColumn.FieldName = "PO"
         fldPONumberColumn.ReadOnly = True
+        fldPONumberColumn.IsVisible = False
         fldPONumberColumn.TextAlignment = ContentAlignment.MiddleCenter
         fldPONumberColumn.HeaderTextAlignment = ContentAlignment.MiddleCenter
         fldPONumberColumn.Width = 100
@@ -248,22 +262,11 @@ Public Class cVPOUI
         fldMOOID.ReadOnly = True
         fldMOOID.TextAlignment = ContentAlignment.MiddleCenter
         fldMOOID.HeaderTextAlignment = ContentAlignment.MiddleCenter
-        fldMOOID.IsVisible = True
+        fldMOOID.IsVisible = False
         fldMOOID.Width = True
         fldMOOID.PinPosition = PinnedColumnPosition.Right
         fldMOOID.IsPinned = True
         GV.Columns.Add(fldMOOID)
-
-        Dim OBLINECOLumn As New GridViewTextBoxColumn()
-        OBLINECOLumn.HeaderText = "OB LINE"
-        OBLINECOLumn.FieldName = "OB_Line"
-        OBLINECOLumn.TextAlignment = ContentAlignment.MiddleCenter
-        OBLINECOLumn.HeaderTextAlignment = ContentAlignment.MiddleCenter
-        OBLINECOLumn.ReadOnly = True
-        OBLINECOLumn.Width = 90
-        OBLINECOLumn.PinPosition = PinnedColumnPosition.Right
-        OBLINECOLumn.IsPinned = True
-        GV.Columns.Add(OBLINECOLumn)
 
         Dim fldBudRefNumColumn As New GridViewTextBoxColumn()
         fldBudRefNumColumn.HeaderText = "BUDGET REFERENCE NO "
@@ -275,6 +278,17 @@ Public Class cVPOUI
         fldBudRefNumColumn.PinPosition = PinnedColumnPosition.Right
         fldBudRefNumColumn.IsPinned = True
         GV.Columns.Add(fldBudRefNumColumn)
+
+        Dim OBLINECOLumn As New GridViewTextBoxColumn()
+        OBLINECOLumn.HeaderText = "OB LINE"
+        OBLINECOLumn.FieldName = "OB_Line"
+        OBLINECOLumn.TextAlignment = ContentAlignment.MiddleCenter
+        OBLINECOLumn.HeaderTextAlignment = ContentAlignment.MiddleCenter
+        OBLINECOLumn.ReadOnly = True
+        OBLINECOLumn.Width = 90
+        OBLINECOLumn.PinPosition = PinnedColumnPosition.Right
+        OBLINECOLumn.IsPinned = True
+        GV.Columns.Add(OBLINECOLumn)
 
         Dim fldIndexColumn As New GridViewTextBoxColumn()
         fldIndexColumn.HeaderText = "INDEX"
@@ -294,7 +308,7 @@ Public Class cVPOUI
         fldPRNoColumn.TextAlignment = ContentAlignment.MiddleCenter
         fldPRNoColumn.HeaderTextAlignment = ContentAlignment.MiddleCenter
         fldPRNoColumn.ReadOnly = True
-        fldPRNoColumn.Width = 100
+        fldPRNoColumn.Width = 200
         GV.Columns.Add(fldPRNoColumn)
 
         Dim fldICodeColumn As New GridViewTextBoxColumn()
@@ -303,7 +317,7 @@ Public Class cVPOUI
         fldICodeColumn.TextAlignment = ContentAlignment.MiddleCenter
         fldICodeColumn.HeaderTextAlignment = ContentAlignment.MiddleCenter
         fldICodeColumn.ReadOnly = True
-        fldICodeColumn.Width = 100
+        fldICodeColumn.Width = 210
         GV.Columns.Add(fldICodeColumn)
 
         Dim fldDescColumn As New GridViewTextBoxColumn()
@@ -311,9 +325,78 @@ Public Class cVPOUI
         fldDescColumn.FieldName = "fldDesc"
         fldDescColumn.TextAlignment = ContentAlignment.MiddleCenter
         fldDescColumn.HeaderTextAlignment = ContentAlignment.MiddleCenter
-        fldDescColumn.Width = 100
+        fldDescColumn.Width = 250
         fldDescColumn.ReadOnly = True
+        GV.Columns.Add(fldDescColumn)
 
+        Dim fldQTycolumn As New GridViewDecimalColumn()
+        fldQTycolumn.HeaderText = "QTY"
+        fldQTycolumn.FieldName = "RQTY"
+        fldQTycolumn.TextAlignment = ContentAlignment.MiddleCenter
+        fldQTycolumn.HeaderTextAlignment = ContentAlignment.MiddleCenter
+        fldQTycolumn.Width = 100
+        fldQTycolumn.FormatString = "{0:N2}"
+        fldQTycolumn.ReadOnly = True
+        GV.Columns.Add(fldQTycolumn)
+
+        Dim UnitColumn As New GridViewDecimalColumn()
+        UnitColumn.HeaderText = "UNIT"
+        UnitColumn.FieldName = "fldUnit"
+        UnitColumn.TextAlignment = ContentAlignment.MiddleCenter
+        UnitColumn.HeaderTextAlignment = ContentAlignment.MiddleCenter
+        UnitColumn.Width = 160
+        UnitColumn.ReadOnly = True
+        UnitColumn.FormatString = "{0:N2}"
+        GV.Columns.Add(UnitColumn)
+
+        Dim fldUPriceColumn As New GridViewDecimalColumn()
+        fldUPriceColumn.HeaderText = "UNIT PRICE"
+        fldUPriceColumn.FieldName = "fldUPrice"
+        fldUPriceColumn.TextAlignment = ContentAlignment.MiddleCenter
+        fldUPriceColumn.HeaderTextAlignment = ContentAlignment.MiddleCenter
+        fldUPriceColumn.Width = 185
+        fldUPriceColumn.ReadOnly = True
+        fldUPriceColumn.FormatString = "{0:N2}"
+        GV.Columns.Add(fldUPriceColumn)
+
+        Dim fldRateColumn As New GridViewDecimalColumn()
+        fldRateColumn.HeaderText = "RATE"
+        fldRateColumn.FieldName = "fldRate"
+        fldRateColumn.ReadOnly = True
+        fldRateColumn.TextAlignment = ContentAlignment.MiddleCenter
+        fldRateColumn.HeaderTextAlignment = ContentAlignment.MiddleCenter
+        fldRateColumn.FormatString = "{0:N6}"
+        fldRateColumn.Width = 180
+        GV.Columns.Add(fldRateColumn)
+
+        Dim fldYenSAPCOLUMN As New GridViewDecimalColumn()
+        fldYenSAPCOLUMN.HeaderText = "SAP JPY"
+        fldYenSAPCOLUMN.FieldName = "fldYenSap"
+        fldYenSAPCOLUMN.ReadOnly = True
+        fldYenSAPCOLUMN.TextAlignment = ContentAlignment.MiddleCenter
+        fldYenSAPCOLUMN.Width = 200
+        fldYenSAPCOLUMN.FormatString = "{0:N6}"
+        GV.Columns.Add(fldYenSAPCOLUMN)
+
+        Dim fldGRPOQTY As New GridViewDecimalColumn()
+        fldGRPOQTY.HeaderText = "GRPO QTY"
+        fldGRPOQTY.FieldName = "GRPOQTY"
+        fldGRPOQTY.ReadOnly = True
+        fldGRPOQTY.TextAlignment = ContentAlignment.MiddleCenter
+        fldGRPOQTY.HeaderTextAlignment = ContentAlignment.MiddleCenter
+        fldGRPOQTY.Width = 100
+        fldGRPOQTY.FormatString = "{0:N2}"
+        fldGRPOQTY.IsVisible = False
+        GV.Columns.Add(fldGRPOQTY)
+
+        Dim fldstatcolumn As New GridViewTextBoxColumn()
+        fldstatcolumn.HeaderText = "STATUS"
+        fldstatcolumn.FieldName = "STAT"
+        fldstatcolumn.HeaderTextAlignment = ContentAlignment.MiddleCenter
+        fldstatcolumn.TextAlignment = ContentAlignment.MiddleCenter
+        fldstatcolumn.Width = 100
+        fldstatcolumn.IsVisible = False
+        GV.Columns.Add(fldstatcolumn)
 
 
     End Sub

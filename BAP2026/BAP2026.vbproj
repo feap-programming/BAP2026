@@ -238,8 +238,13 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\GeneralQueries\cCancelMOI.vb" />
     <Compile Include="Controller\GeneralQueries\cAddConversion.vb" />
     <Compile Include="Controller\GeneralQueries\cAddPOI.vb" />
+    <Compile Include="Controller\GeneralQueries\cCancelPO.vb" />
+    <Compile Include="Controller\GeneralQueries\cCancelPOI.vb" />
+    <Compile Include="Controller\GeneralQueries\cCloseOPenMOI.vb" />
+    <Compile Include="Controller\GeneralQueries\cCloseOpenPO.vb" />
     <Compile Include="Controller\GeneralQueries\cCreatePO.vb" />
     <Compile Include="Controller\GeneralQueries\cDeleteMajorRef.vb" />
     <Compile Include="Controller\GeneralQueries\cGenerateConversion.vb" />
@@ -248,6 +253,8 @@
     <Compile Include="Controller\GeneralQueries\cGetAllDeptCode.vb" />
     <Compile Include="Controller\GeneralQueries\cGetItemPOByPRNO.vb" />
     <Compile Include="Controller\GeneralQueries\cGetPoByDate.vb" />
+    <Compile Include="Controller\GeneralQueries\cGetPOIItems.vb" />
+    <Compile Include="Controller\GeneralQueries\cGetPRITEMS.vb" />
     <Compile Include="Controller\GeneralQueries\cGetSummaryTM.vb" />
     <Compile Include="Controller\GeneralQueries\cGetTJPY.vb" />
     <Compile Include="Controller\GeneralQueries\cGetUID.vb" />
@@ -269,7 +276,9 @@
     <Compile Include="Controller\GeneralQueries\cInsertRemainingBudgetHistory.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Controller\GeneralQueries\cLoadPRDEPT.vb" />
     <Compile Include="Controller\GeneralQueries\cSelectAllActivityPR.vb" />
+    <Compile Include="Controller\GeneralQueries\cSelectAllItemtoPO.vb" />
     <Compile Include="Controller\GeneralQueries\cSelectConversion.vb" />
     <Compile Include="Controller\GeneralQueries\cSelectFAC.vb" />
     <Compile Include="Controller\GeneralQueries\cSelectMajorDescPR.vb" />
@@ -278,8 +287,12 @@
     <Compile Include="Controller\GeneralQueries\cSelectAllDesc.vb" />
     <Compile Include="Controller\GeneralQueries\cSelectAllProcess.vb" />
     <Compile Include="Controller\GeneralQueries\cSelectModels.vb" />
+    <Compile Include="Controller\GeneralQueries\cSelectPRSEARCH.vb" />
     <Compile Include="Controller\GeneralQueries\cSelectYear.vb" />
+    <Compile Include="Controller\GeneralQueries\cUpdateClosePOI.vb" />
     <Compile Include="Controller\GeneralQueries\cUpdateMajorBudget.vb" />
+    <Compile Include="Controller\GeneralQueries\cVPRRemove.vb" />
+    <Compile Include="Controller\SAP\cGetPONO.vb" />
     <Compile Include="Controller\SAP\cSelectCurrency.vb" />
     <Compile Include="Controller\SAP\cSelectCurrencyPO.vb" />
     <Compile Include="Controller\SAP\cSelectInvestment.vb" />
@@ -354,6 +367,7 @@
     <Compile Include="UI\cOpenChildForm.vb" />
     <Compile Include="UI\cPOUI.vb" />
     <Compile Include="UI\cPurchaseReqUI.vb" />
+    <Compile Include="UI\cViewPRUI.vb" />
     <Compile Include="UI\cVPOUI.vb" />
     <EmbeddedResource Include="Controller\GeneralQueries\cInsertActivityModelByPR.resx">
       <DependentUpon>cInsertActivityModelByPR.vb</DependentUpon>
@@ -389,10 +403,10 @@
     <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNewPR.Designer.vb">
-      <DependentUpon>frmNewPR.vb</DependentUpon>
+    <Compile Include="frmViewPR.Designer.vb">
+      <DependentUpon>frmViewPR.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmNewPR.vb">
+    <Compile Include="frmViewPR.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmRegister.Designer.vb">
@@ -427,8 +441,8 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNewPR.resx">
-      <DependentUpon>frmNewPR.vb</DependentUpon>
+    <EmbeddedResource Include="frmViewPR.resx">
+      <DependentUpon>frmViewPR.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegister.resx">
       <DependentUpon>FrmRegister.vb</DependentUpon>
