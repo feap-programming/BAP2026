@@ -52,12 +52,12 @@ Partial Class frmCreateBudget
         Me.gvData = New Telerik.WinControls.UI.RadGridView()
         Me.CommandBarRowElement1 = New Telerik.WinControls.UI.CommandBarRowElement()
         Me.CommandBarStripElement2 = New Telerik.WinControls.UI.CommandBarStripElement()
-        Me.CommandBarSeparator3 = New Telerik.WinControls.UI.CommandBarSeparator()
         Me.btnAddRec = New Telerik.WinControls.UI.CommandBarButton()
-        Me.CommandBarSeparator1 = New Telerik.WinControls.UI.CommandBarSeparator()
+        Me.CommandBarSeparator3 = New Telerik.WinControls.UI.CommandBarSeparator()
         Me.btnAddMajorRef = New Telerik.WinControls.UI.CommandBarButton()
-        Me.CommandBarSeparator4 = New Telerik.WinControls.UI.CommandBarSeparator()
+        Me.CommandBarSeparator1 = New Telerik.WinControls.UI.CommandBarSeparator()
         Me.btnEditMajorRef = New Telerik.WinControls.UI.CommandBarButton()
+        Me.CommandBarSeparator4 = New Telerik.WinControls.UI.CommandBarSeparator()
         Me.btnDeleteMajorRef = New Telerik.WinControls.UI.CommandBarButton()
         Me.CommandBarSeparator5 = New Telerik.WinControls.UI.CommandBarSeparator()
         Me.CommandBarSeparator6 = New Telerik.WinControls.UI.CommandBarSeparator()
@@ -276,15 +276,6 @@ Partial Class frmCreateBudget
         Me.CommandBarStripElement2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.CommandBarStripElement2.UseCompatibleTextRendering = False
         '
-        'CommandBarSeparator3
-        '
-        Me.CommandBarSeparator3.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.CommandBarSeparator3.DisplayName = "CommandBarSeparator3"
-        Me.CommandBarSeparator3.Name = "CommandBarSeparator3"
-        Me.CommandBarSeparator3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.CommandBarSeparator3.UseCompatibleTextRendering = False
-        Me.CommandBarSeparator3.VisibleInOverflowMenu = False
-        '
         'btnAddRec
         '
         Me.btnAddRec.AccessibleDescription = "Add Credits"
@@ -301,14 +292,14 @@ Partial Class frmCreateBudget
         Me.btnAddRec.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.btnAddRec.UseCompatibleTextRendering = False
         '
-        'CommandBarSeparator1
+        'CommandBarSeparator3
         '
-        Me.CommandBarSeparator1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.CommandBarSeparator1.DisplayName = "CommandBarSeparator1"
-        Me.CommandBarSeparator1.Name = "CommandBarSeparator1"
-        Me.CommandBarSeparator1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.CommandBarSeparator1.UseCompatibleTextRendering = False
-        Me.CommandBarSeparator1.VisibleInOverflowMenu = False
+        Me.CommandBarSeparator3.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.CommandBarSeparator3.DisplayName = "CommandBarSeparator3"
+        Me.CommandBarSeparator3.Name = "CommandBarSeparator3"
+        Me.CommandBarSeparator3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.CommandBarSeparator3.UseCompatibleTextRendering = False
+        Me.CommandBarSeparator3.VisibleInOverflowMenu = False
         '
         'btnAddMajorRef
         '
@@ -326,14 +317,14 @@ Partial Class frmCreateBudget
         Me.btnAddMajorRef.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.btnAddMajorRef.UseCompatibleTextRendering = False
         '
-        'CommandBarSeparator4
+        'CommandBarSeparator1
         '
-        Me.CommandBarSeparator4.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.CommandBarSeparator4.DisplayName = "CommandBarSeparator4"
-        Me.CommandBarSeparator4.Name = "CommandBarSeparator4"
-        Me.CommandBarSeparator4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.CommandBarSeparator4.UseCompatibleTextRendering = False
-        Me.CommandBarSeparator4.VisibleInOverflowMenu = False
+        Me.CommandBarSeparator1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.CommandBarSeparator1.DisplayName = "CommandBarSeparator1"
+        Me.CommandBarSeparator1.Name = "CommandBarSeparator1"
+        Me.CommandBarSeparator1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.CommandBarSeparator1.UseCompatibleTextRendering = False
+        Me.CommandBarSeparator1.VisibleInOverflowMenu = False
         '
         'btnEditMajorRef
         '
@@ -352,6 +343,15 @@ Partial Class frmCreateBudget
         Me.btnEditMajorRef.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.btnEditMajorRef.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.btnEditMajorRef.UseCompatibleTextRendering = False
+        '
+        'CommandBarSeparator4
+        '
+        Me.CommandBarSeparator4.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.CommandBarSeparator4.DisplayName = "CommandBarSeparator4"
+        Me.CommandBarSeparator4.Name = "CommandBarSeparator4"
+        Me.CommandBarSeparator4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.CommandBarSeparator4.UseCompatibleTextRendering = False
+        Me.CommandBarSeparator4.VisibleInOverflowMenu = False
         '
         'btnDeleteMajorRef
         '
@@ -421,6 +421,7 @@ Partial Class frmCreateBudget
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmCreateBudget"
         Me.Text = "ACCREDITATION"
+        Me.ThemeName = "VisualStudio2022Light"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.RadStatusStrip1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gvData.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()

@@ -516,5 +516,87 @@ Public Class cGvAllEmployees
         gv.AllowRowResize = False
         gv.AllowAddNewRow = False
     End Sub
+    Public Sub readyMcbCheckers(ByVal mcb As Telerik.WinControls.UI.RadMultiColumnComboBox)
+        Dim ID As New GridViewTextBoxColumn()
+        ID.HeaderText = "ID"
+        ID.FieldName = "ID"
+        ID.IsVisible = False
+        mcb.MultiColumnComboBoxElement.Columns.Add(ID)
+
+        Dim fldEmpNo As New GridViewTextBoxColumn("EMPLOYEE NO.")
+        fldEmpNo.FieldName = "fldEmpNo"
+        fldEmpNo.ReadOnly = True
+        fldEmpNo.TextAlignment = ContentAlignment.MiddleCenter
+        fldEmpNo.Width = 200
+        fldEmpNo.IsVisible = False
+        mcb.MultiColumnComboBoxElement.Columns.Add(fldEmpNo)
+
+        Dim fldEmpName As New GridViewTextBoxColumn("NAME")
+        fldEmpName.FieldName = "empName"
+        fldEmpName.ReadOnly = True
+        fldEmpName.TextAlignment = ContentAlignment.MiddleCenter
+        fldEmpName.Width = 200
+        mcb.MultiColumnComboBoxElement.Columns.Add(fldEmpName)
+
+        Dim fldJobTitle As New GridViewTextBoxColumn("JOB TITLE")
+        fldJobTitle.FieldName = "fldJobTitle"
+        fldJobTitle.ReadOnly = True
+        fldJobTitle.TextAlignment = ContentAlignment.MiddleCenter
+        fldJobTitle.Width = 200
+        fldJobTitle.IsVisible = False
+        mcb.MultiColumnComboBoxElement.Columns.Add(fldJobTitle)
+
+        mcb.DisplayMember = "empName"
+        mcb.ValueMember = "empName"
+        mcb.MultiColumnComboBoxElement.AutoSizeMode = RadAutoSizeMode.Auto
+        mcb.MultiColumnComboBoxElement.AutoSizeDropDownToBestFit = True
+        mcb.AutoFilter = True
+
+        Dim EmpName As FilterDescriptor = New FilterDescriptor()
+        EmpName.PropertyName = "empName"
+        EmpName.[Operator] = FilterOperator.Contains
+        mcb.EditorControl.MasterTemplate.FilterDescriptors.Add(EmpName)
+    End Sub
+
+    Public Sub readyMcbApprovers(ByVal mcb As Telerik.WinControls.UI.RadMultiColumnComboBox)
+        Dim ID As New GridViewTextBoxColumn()
+        ID.HeaderText = "ID"
+        ID.FieldName = "ID"
+        ID.IsVisible = False
+        mcb.MultiColumnComboBoxElement.Columns.Add(ID)
+
+        Dim fldEmpNo As New GridViewTextBoxColumn("EMPLOYEE NO.")
+        fldEmpNo.FieldName = "fldEmpNo"
+        fldEmpNo.ReadOnly = True
+        fldEmpNo.TextAlignment = ContentAlignment.MiddleCenter
+        fldEmpNo.Width = 200
+        fldEmpNo.IsVisible = False
+        mcb.MultiColumnComboBoxElement.Columns.Add(fldEmpNo)
+
+        Dim fldEmpName As New GridViewTextBoxColumn("NAME")
+        fldEmpName.FieldName = "empName"
+        fldEmpName.ReadOnly = True
+        fldEmpName.TextAlignment = ContentAlignment.MiddleCenter
+        fldEmpName.Width = 200
+        mcb.MultiColumnComboBoxElement.Columns.Add(fldEmpName)
+
+        Dim fldJobTitle As New GridViewTextBoxColumn("JOB TITLE")
+        fldJobTitle.FieldName = "fldJobTitle"
+        fldJobTitle.ReadOnly = True
+        fldJobTitle.TextAlignment = ContentAlignment.MiddleCenter
+        fldJobTitle.Width = 200
+        fldJobTitle.IsVisible = False
+        mcb.MultiColumnComboBoxElement.Columns.Add(fldJobTitle)
+
+        mcb.DisplayMember = "empName"
+        mcb.ValueMember = "empName"
+        mcb.MultiColumnComboBoxElement.AutoSizeMode = RadAutoSizeMode.Auto
+        mcb.MultiColumnComboBoxElement.AutoSizeDropDownToBestFit = True
+        mcb.AutoFilter = True
+        Dim EmpName As FilterDescriptor = New FilterDescriptor()
+        EmpName.PropertyName = "empName"
+        EmpName.[Operator] = FilterOperator.Contains
+        mcb.EditorControl.MasterTemplate.FilterDescriptors.Add(EmpName)
+    End Sub
 
 End Class

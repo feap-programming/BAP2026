@@ -69,13 +69,18 @@
     <ApplicationIcon>BAP 2026 2.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -92,6 +97,7 @@
       <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.RadDock.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Telerik.WinControls.RichTextEditor, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.Aqua, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.Themes.Aqua.dll</HintPath>
       <Private>True</Private>
@@ -164,7 +170,11 @@
       <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.Themes.Windows8.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.UI, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2026.2.520.462\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2026.2.519.462, Culture=neutral, PublicKeyToken=5803cfa389c90ce7" />
     <Reference Include="TelerikCommon, Version=2026.2.520.462, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <HintPath>..\lib\RCWF\2026.2.520.462\TelerikCommon.dll</HintPath>
       <Private>True</Private>
@@ -230,7 +240,9 @@
     <Compile Include="Controller\GeneralQueries\cInsertRemainingBudgetHistory.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Controller\GeneralQueries\cInsertRFQ.vb" />
     <Compile Include="Controller\GeneralQueries\cSelectAllActivityPR.vb" />
+    <Compile Include="Controller\GeneralQueries\cSelectBapUOM.vb" />
     <Compile Include="Controller\GeneralQueries\cSelectConversion.vb" />
     <Compile Include="Controller\GeneralQueries\cSelectFAC.vb" />
     <Compile Include="Controller\GeneralQueries\cSelectMajorDescPR.vb" />
@@ -239,8 +251,10 @@
     <Compile Include="Controller\GeneralQueries\cSelectAllDesc.vb" />
     <Compile Include="Controller\GeneralQueries\cSelectAllProcess.vb" />
     <Compile Include="Controller\GeneralQueries\cSelectModels.vb" />
+    <Compile Include="Controller\GeneralQueries\cSelectRFQ.vb" />
     <Compile Include="Controller\GeneralQueries\cSelectYear.vb" />
     <Compile Include="Controller\GeneralQueries\cUpdateMajorBudget.vb" />
+    <Compile Include="Controller\HRMS\cSelectEmp.vb" />
     <Compile Include="Controller\SAP\cSelectCurrency.vb" />
     <Compile Include="Controller\SAP\cSelectCurrencyPO.vb" />
     <Compile Include="Controller\SAP\cSelectInvestment.vb" />
@@ -304,7 +318,14 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Controller\GeneralQueries\cSelectAllMajorBudget.vb" />
+    <Compile Include="frmRFQ.Designer.vb">
+      <DependentUpon>frmRFQ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRFQ.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GridViews\cGvAllMajorRef.vb" />
+    <Compile Include="GridViews\cGvRFQ.vb" />
     <Compile Include="UI\cHomeUI.vb" />
     <Compile Include="UI\cOpenChildForm.vb" />
     <Compile Include="UI\cPOUI.vb" />
@@ -386,6 +407,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegister.resx">
       <DependentUpon>FrmRegister.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRFQ.resx">
+      <DependentUpon>frmRFQ.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

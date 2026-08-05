@@ -50,7 +50,12 @@ Public Class cselectUsers
         Return dt
     End Function
 
-
+    Public Function SelectRFQUsers() As DataTable
+        Dim dt As DataTable
+        GlobalVariables.myParam.Clear()
+        dt = dbMain.dbSelect("SP_BAP_GetAllEmployee")
+        Return dt
+    End Function
 
 
 

@@ -48,6 +48,7 @@ Partial Class FrmDashboard_vb1
         Dim RadTreeNode24 As Telerik.WinControls.UI.RadTreeNode = New Telerik.WinControls.UI.RadTreeNode()
         Dim RadTreeNode25 As Telerik.WinControls.UI.RadTreeNode = New Telerik.WinControls.UI.RadTreeNode()
         Dim RadTreeNode26 As Telerik.WinControls.UI.RadTreeNode = New Telerik.WinControls.UI.RadTreeNode()
+        Dim RadTreeNode27 As Telerik.WinControls.UI.RadTreeNode = New Telerik.WinControls.UI.RadTreeNode()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmDashboard_vb1))
         Me.RadCollapsiblePanel1 = New Telerik.WinControls.UI.RadCollapsiblePanel()
         Me.RadPanel1 = New Telerik.WinControls.UI.RadPanel()
@@ -225,27 +226,29 @@ Partial Class FrmDashboard_vb1
         RadTreeNode21.Expanded = True
         RadTreeNode21.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         RadTreeNode21.Name = "nodeRequestQuotation"
-        RadTreeNode22.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RadTreeNode22.Name = "nodeRFQSuppliers"
-        RadTreeNode22.Text = "RFQ Suppliers"
+        RadTreeNode22.Name = "nodeRFQ"
+        RadTreeNode22.Text = "RFQ"
         RadTreeNode23.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RadTreeNode23.Name = "nodeSignatory"
-        RadTreeNode23.Text = "Signatory"
-        RadTreeNode21.Nodes.AddRange(New Telerik.WinControls.UI.RadTreeNode() {RadTreeNode22, RadTreeNode23})
+        RadTreeNode23.Name = "nodeRFQSuppliers"
+        RadTreeNode23.Text = "RFQ Suppliers"
+        RadTreeNode24.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        RadTreeNode24.Name = "nodeSignatory"
+        RadTreeNode24.Text = "Signatory"
+        RadTreeNode21.Nodes.AddRange(New Telerik.WinControls.UI.RadTreeNode() {RadTreeNode22, RadTreeNode23, RadTreeNode24})
         RadTreeNode21.Text = "Request for Quotation"
         RadTreeNode21.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        RadTreeNode24.Expanded = True
-        RadTreeNode24.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RadTreeNode24.Name = "nodeSubBudget"
-        RadTreeNode25.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RadTreeNode25.Name = "nodeUploadandUpdateSubBudget"
-        RadTreeNode25.Text = "Upload and Update Sub Budget"
-        RadTreeNode24.Nodes.AddRange(New Telerik.WinControls.UI.RadTreeNode() {RadTreeNode25})
-        RadTreeNode24.Text = "Sub Budget"
-        RadTreeNode26.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RadTreeNode26.Name = "nodeManageuser"
-        RadTreeNode26.Text = "Manage User"
-        Me.treeModules.Nodes.AddRange(New Telerik.WinControls.UI.RadTreeNode() {RadTreeNode1, RadTreeNode7, RadTreeNode12, RadTreeNode18, RadTreeNode19, RadTreeNode21, RadTreeNode24, RadTreeNode26})
+        RadTreeNode25.Expanded = True
+        RadTreeNode25.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        RadTreeNode25.Name = "nodeSubBudget"
+        RadTreeNode26.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        RadTreeNode26.Name = "nodeUploadandUpdateSubBudget"
+        RadTreeNode26.Text = "Upload and Update Sub Budget"
+        RadTreeNode25.Nodes.AddRange(New Telerik.WinControls.UI.RadTreeNode() {RadTreeNode26})
+        RadTreeNode25.Text = "Sub Budget"
+        RadTreeNode27.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        RadTreeNode27.Name = "nodeManageuser"
+        RadTreeNode27.Text = "Manage User"
+        Me.treeModules.Nodes.AddRange(New Telerik.WinControls.UI.RadTreeNode() {RadTreeNode1, RadTreeNode7, RadTreeNode12, RadTreeNode18, RadTreeNode19, RadTreeNode21, RadTreeNode25, RadTreeNode27})
         Me.treeModules.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.treeModules.Size = New System.Drawing.Size(223, 693)
         Me.treeModules.TabIndex = 1
