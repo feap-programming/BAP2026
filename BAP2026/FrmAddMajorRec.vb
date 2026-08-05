@@ -337,9 +337,6 @@ Public Class FrmAddMajorRec
 
             Exit Sub
 
-
-
-
         End If
 
 

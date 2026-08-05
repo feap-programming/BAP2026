@@ -22,22 +22,22 @@ Partial Class FrmAddPurchaseReq
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim TableViewDefinition5 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim RadListDataItem13 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem14 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem15 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim TableViewDefinition6 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim RadListDataItem1 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem2 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem3 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim RadListDataItem4 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem5 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem6 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem7 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem8 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem9 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim TableViewDefinition7 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition8 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim RadListDataItem10 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem11 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem12 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim TableViewDefinition3 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition4 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel2 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel3 = New Telerik.WinControls.UI.RadLabel()
@@ -437,7 +437,7 @@ Partial Class FrmAddPurchaseReq
         Me.cbInvestment.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.cbInvestment.EditorControl.MasterTemplate.EnableGrouping = False
         Me.cbInvestment.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.cbInvestment.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition5
+        Me.cbInvestment.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.cbInvestment.EditorControl.Name = "NestedRadGridView"
         Me.cbInvestment.EditorControl.ReadOnly = True
         Me.cbInvestment.EditorControl.ShowGroupPanel = False
@@ -498,12 +498,12 @@ Partial Class FrmAddPurchaseReq
         'ddInspection
         '
         Me.ddInspection.BackColor = System.Drawing.SystemColors.Window
-        RadListDataItem13.Text = "Immediate Inspection"
-        RadListDataItem14.Text = "2-3 Days Inspection"
-        RadListDataItem15.Text = "N/A"
-        Me.ddInspection.Items.Add(RadListDataItem13)
-        Me.ddInspection.Items.Add(RadListDataItem14)
-        Me.ddInspection.Items.Add(RadListDataItem15)
+        RadListDataItem1.Text = "Immediate Inspection"
+        RadListDataItem2.Text = "2-3 Days Inspection"
+        RadListDataItem3.Text = "N/A"
+        Me.ddInspection.Items.Add(RadListDataItem1)
+        Me.ddInspection.Items.Add(RadListDataItem2)
+        Me.ddInspection.Items.Add(RadListDataItem3)
         Me.ddInspection.Location = New System.Drawing.Point(260, 244)
         Me.ddInspection.Name = "ddInspection"
         Me.ddInspection.Size = New System.Drawing.Size(283, 24)
@@ -678,7 +678,7 @@ Partial Class FrmAddPurchaseReq
         Me.CBRefNum.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.CBRefNum.EditorControl.MasterTemplate.EnableGrouping = False
         Me.CBRefNum.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.CBRefNum.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition6
+        Me.CBRefNum.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition2
         Me.CBRefNum.EditorControl.Name = "NestedRadGridView"
         Me.CBRefNum.EditorControl.ReadOnly = True
         Me.CBRefNum.EditorControl.ShowGroupPanel = False
@@ -712,10 +712,10 @@ Partial Class FrmAddPurchaseReq
         'ddStatus
         '
         Me.ddStatus.BackColor = System.Drawing.SystemColors.Window
-        RadListDataItem1.Text = "OPEN"
-        RadListDataItem2.Text = "CLOSE"
-        Me.ddStatus.Items.Add(RadListDataItem1)
-        Me.ddStatus.Items.Add(RadListDataItem2)
+        RadListDataItem4.Text = "OPEN"
+        RadListDataItem5.Text = "CLOSE"
+        Me.ddStatus.Items.Add(RadListDataItem4)
+        Me.ddStatus.Items.Add(RadListDataItem5)
         Me.ddStatus.Location = New System.Drawing.Point(260, 783)
         Me.ddStatus.Name = "ddStatus"
         Me.ddStatus.Size = New System.Drawing.Size(283, 24)
@@ -996,10 +996,10 @@ Partial Class FrmAddPurchaseReq
         'ddclassfix
         '
         Me.ddclassfix.BackColor = System.Drawing.SystemColors.Window
-        RadListDataItem3.Text = "Principal"
-        RadListDataItem4.Text = "Capitalized"
-        Me.ddclassfix.Items.Add(RadListDataItem3)
-        Me.ddclassfix.Items.Add(RadListDataItem4)
+        RadListDataItem6.Text = "Principal"
+        RadListDataItem7.Text = "Capitalized"
+        Me.ddclassfix.Items.Add(RadListDataItem6)
+        Me.ddclassfix.Items.Add(RadListDataItem7)
         Me.ddclassfix.Location = New System.Drawing.Point(848, 274)
         Me.ddclassfix.Name = "ddclassfix"
         Me.ddclassfix.Size = New System.Drawing.Size(466, 24)
@@ -1044,12 +1044,12 @@ Partial Class FrmAddPurchaseReq
         'ddCurrency
         '
         Me.ddCurrency.BackColor = System.Drawing.SystemColors.Window
-        RadListDataItem5.Text = "PHP"
-        RadListDataItem6.Text = "USD"
-        RadListDataItem7.Text = "JPY"
-        Me.ddCurrency.Items.Add(RadListDataItem5)
-        Me.ddCurrency.Items.Add(RadListDataItem6)
-        Me.ddCurrency.Items.Add(RadListDataItem7)
+        RadListDataItem8.Text = "PHP"
+        RadListDataItem9.Text = "USD"
+        RadListDataItem10.Text = "JPY"
+        Me.ddCurrency.Items.Add(RadListDataItem8)
+        Me.ddCurrency.Items.Add(RadListDataItem9)
+        Me.ddCurrency.Items.Add(RadListDataItem10)
         Me.ddCurrency.Location = New System.Drawing.Point(848, 177)
         Me.ddCurrency.Name = "ddCurrency"
         Me.ddCurrency.Size = New System.Drawing.Size(466, 24)
@@ -1059,10 +1059,10 @@ Partial Class FrmAddPurchaseReq
         'DDPEZA
         '
         Me.DDPEZA.BackColor = System.Drawing.SystemColors.Window
-        RadListDataItem8.Text = "YES"
-        RadListDataItem9.Text = "NO"
-        Me.DDPEZA.Items.Add(RadListDataItem8)
-        Me.DDPEZA.Items.Add(RadListDataItem9)
+        RadListDataItem11.Text = "YES"
+        RadListDataItem12.Text = "NO"
+        Me.DDPEZA.Items.Add(RadListDataItem11)
+        Me.DDPEZA.Items.Add(RadListDataItem12)
         Me.DDPEZA.Location = New System.Drawing.Point(948, 377)
         Me.DDPEZA.Name = "DDPEZA"
         Me.DDPEZA.Size = New System.Drawing.Size(366, 22)
@@ -1096,7 +1096,7 @@ Partial Class FrmAddPurchaseReq
         Me.cbSubRefNo.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.cbSubRefNo.EditorControl.MasterTemplate.EnableGrouping = False
         Me.cbSubRefNo.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.cbSubRefNo.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition7
+        Me.cbSubRefNo.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition3
         Me.cbSubRefNo.EditorControl.Name = "NestedRadGridView"
         Me.cbSubRefNo.EditorControl.ReadOnly = True
         Me.cbSubRefNo.EditorControl.ShowGroupPanel = False
@@ -1177,7 +1177,6 @@ Partial Class FrmAddPurchaseReq
         Me.lblTCID.Size = New System.Drawing.Size(57, 18)
         Me.lblTCID.TabIndex = 42
         Me.lblTCID.Text = "FABRIGAR"
-        Me.lblTCID.Visible = False
         '
         'lblUID
         '
@@ -1186,7 +1185,6 @@ Partial Class FrmAddPurchaseReq
         Me.lblUID.Size = New System.Drawing.Size(55, 18)
         Me.lblUID.TabIndex = 41
         Me.lblUID.Text = "JAYMARK"
-        Me.lblUID.Visible = False
         '
         'rsConversion
         '
@@ -1383,7 +1381,7 @@ Partial Class FrmAddPurchaseReq
         '
         '
         '
-        Me.gvPR.MasterTemplate.ViewDefinition = TableViewDefinition8
+        Me.gvPR.MasterTemplate.ViewDefinition = TableViewDefinition4
         Me.gvPR.Name = "gvPR"
         Me.gvPR.Size = New System.Drawing.Size(851, 216)
         Me.gvPR.TabIndex = 26

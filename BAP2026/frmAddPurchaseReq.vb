@@ -1526,7 +1526,8 @@ Public Class FrmAddPurchaseReq
         dtTCID = cGenerateTCID.GenerateTCID()
 
         If dtTCID IsNot Nothing AndAlso dtTCID.Rows.Count > 0 Then
-            lblTCID.Text = dtTCID.Rows(0)("ID").ToString()
+            TCID = dtTCID.Rows(0)("ID").ToString()
+            lblTCID.Text = TCID
         End If
 
 
@@ -1534,6 +1535,10 @@ Public Class FrmAddPurchaseReq
 
 
     Private Sub btnInsert_Click(sender As Object, e As EventArgs) Handles btnInsert.Click
+
+        Dim Transcode As String
+
+        Transcode = "TC000" + UID + "-" + TCID + "-" + tbDept.Text
 
 
         If String.IsNullOrEmpty(CBRefNum.Text) Then
@@ -1651,20 +1656,20 @@ Public Class FrmAddPurchaseReq
 
         End If
 
+        GenerateTCNO()
 
 
 
         If RadMessageBox.Show("Order Added", "Notification", MessageBoxButtons.OK, RadMessageIcon.Info) Then
             RadMessageBox.SetThemeName("Windows8")
-
-            Dim Transcode As String
-
-
-            '-------------PR INSERT----------------
+            GenerateTCNO()
 
 
 
-            Transcode = "TC000" + UID + "-" + TCID + "-" + tbDept.Text
+
+            GenerateTCNO()
+
+
 
             'Transcode = "TC00" + GlobalVariables.UIDemp
 
@@ -1717,7 +1722,9 @@ Public Class FrmAddPurchaseReq
 
 
 
-            '-------------ITEM INSERT----------------'
+            '-------------PR ITEMs INSERT----------------'
+
+
 
             For x As Integer = 0 To gvPR.Rows.Count - 1
 
@@ -1751,11 +1758,13 @@ Public Class FrmAddPurchaseReq
                     PrincipalNo:=gvPR.Rows(x).Cells("PRNo").Value.ToString
                 )
 
-                '-------------ITEM INSERT----------------' 
+                '-------------PR ITEMs INSERT----------------' 
 
             Next
 
             '----------------INSERT INVESTMENT-------------------'
+
+
 
             InvestmentInsert(BudRefNum:=CBRefNum.Text, Transcode, MonthOrder:=dtpMO.Value, OrderDesc:=tbcDescription.Text, Classification:=ddClass.Text, OrderDepartment:=tbDept.Text,
                                                                  _Process:=ddProcess.Text, QTY:=rsQty.Value, UOM:=ddUOM.Text, OrderStatus:=ddStatus.Text, OrderRemarks:=tbcReason.Text, Signature:=tbUser.Text,
@@ -1766,6 +1775,8 @@ Public Class FrmAddPurchaseReq
 
 
             '----------------INSERT REMAINING BUDGET HISTORY-------------------'
+
+
 
 
             InsertRBHistory(Transcode, RemBud:=rsRBB.Value, UPO:=rsUPO.Value, PO:=rsPO.Value,
@@ -1779,6 +1790,8 @@ Public Class FrmAddPurchaseReq
             '---------------INSERT  ACTIVITY & MODEL  -------------------'
 
 
+
+
             InsertAAM(Activity:=ddActivity.Text, Model:=modCDD.Text, Transcode)
 
             '---------------INSERT  ACTIVITY & MODEL  -------------------'
@@ -1787,6 +1800,8 @@ Public Class FrmAddPurchaseReq
 
             'ClearFields()
         End If
+
+        GenerateTCNO()
 
     End Sub
 
