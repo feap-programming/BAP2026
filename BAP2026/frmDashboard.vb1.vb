@@ -263,6 +263,13 @@ Public Class FrmDashboard_vb1
                     frmaddPO.SelectedDept = frmhome.SelectedDept
 
                     LoadingForm(frmaddPO)
+
+                Case "nodeRFQ"
+
+                    Dim frmRFQ As New FrmRFQ
+                    'FrmAddPO.SelectedDept = frmhome.SelectedDept
+
+                    LoadingForm(frmRFQ)
             End Select
 
         Else

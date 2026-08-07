@@ -42,4 +42,17 @@
 
     End Function
 
+    Public Function selectRFQChildByRFQNo(ByVal parRFQNo As String)
+
+        Dim dt As DataTable
+
+        GlobalVariables.myParam.Clear()
+
+        dbMain.addParameters("parRFQNo", parRFQNo)
+        dt = dbMain.dbSelect("SP_SelectRFQChildByRFQNo")
+
+        Return dt
+
+    End Function
+
 End Class

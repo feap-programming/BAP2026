@@ -22,18 +22,20 @@ Partial Class FrmRFQ
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim TableViewDefinition9 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition10 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition11 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition12 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition3 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition4 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.VisualStudio2022LightTheme1 = New Telerik.WinControls.Themes.VisualStudio2022LightTheme()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.gvItems = New Telerik.WinControls.UI.RadGridView()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.pbItems = New Telerik.WinControls.UI.RadProgressBar()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.btnCancel = New FontAwesome.Sharp.IconButton()
+        Me.txtRemarks = New Telerik.WinControls.UI.RadRichTextEditor()
+        Me.txtItemDesc = New Telerik.WinControls.UI.RadRichTextEditor()
         Me.btnAddItem = New FontAwesome.Sharp.IconButton()
         Me.btnSave = New FontAwesome.Sharp.IconButton()
         Me.ddUOM = New Telerik.WinControls.UI.RadDropDownList()
@@ -47,11 +49,9 @@ Partial Class FrmRFQ
         Me.RadGroupBox1 = New Telerik.WinControls.UI.RadGroupBox()
         Me.rbChemNo = New Telerik.WinControls.UI.RadRadioButton()
         Me.rbChemYes = New Telerik.WinControls.UI.RadRadioButton()
-        Me.txtRemarks = New Telerik.WinControls.UI.RadRichTextEditor()
         Me.dtDateNeeded = New Telerik.WinControls.UI.RadDateTimePicker()
         Me.RadLabel13 = New Telerik.WinControls.UI.RadLabel()
         Me.seQty = New Telerik.WinControls.UI.RadSpinEditor()
-        Me.txtItemDesc = New Telerik.WinControls.UI.RadRichTextEditor()
         Me.RadLabel12 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel11 = New Telerik.WinControls.UI.RadLabel()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -76,9 +76,11 @@ Partial Class FrmRFQ
         Me.RadLabel2 = New Telerik.WinControls.UI.RadLabel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.gvData = New Telerik.WinControls.UI.RadGridView()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.bwSave = New System.ComponentModel.BackgroundWorker()
-        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.bwUpdate = New System.ComponentModel.BackgroundWorker()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.gvItems, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,6 +88,8 @@ Partial Class FrmRFQ
         Me.Panel6.SuspendLayout()
         CType(Me.pbItems, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
+        CType(Me.txtRemarks, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtItemDesc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ddUOM, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ddExpenseType, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel16, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -99,11 +103,9 @@ Partial Class FrmRFQ
         Me.RadGroupBox1.SuspendLayout()
         CType(Me.rbChemNo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.rbChemYes, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtRemarks, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtDateNeeded, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.seQty, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtItemDesc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
@@ -133,6 +135,7 @@ Partial Class FrmRFQ
         Me.Panel2.SuspendLayout()
         CType(Me.gvData, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gvData.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel8.SuspendLayout()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -166,7 +169,7 @@ Partial Class FrmRFQ
         '
         '
         Me.gvItems.MasterTemplate.AllowAddNewRow = False
-        Me.gvItems.MasterTemplate.ViewDefinition = TableViewDefinition9
+        Me.gvItems.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.gvItems.Name = "gvItems"
         Me.gvItems.Size = New System.Drawing.Size(412, 254)
         Me.gvItems.TabIndex = 3
@@ -175,7 +178,6 @@ Partial Class FrmRFQ
         'Panel6
         '
         Me.Panel6.Controls.Add(Me.pbItems)
-        Me.Panel6.Controls.Add(Me.IconButton1)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel6.Location = New System.Drawing.Point(0, 254)
         Me.Panel6.Name = "Panel6"
@@ -189,30 +191,15 @@ Partial Class FrmRFQ
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pbItems.Location = New System.Drawing.Point(6, 7)
         Me.pbItems.Name = "pbItems"
-        Me.pbItems.Size = New System.Drawing.Size(282, 39)
+        Me.pbItems.Size = New System.Drawing.Size(403, 39)
         Me.pbItems.TabIndex = 4
         Me.pbItems.ThemeName = "VisualStudio2022Light"
         '
-        'IconButton1
-        '
-        Me.IconButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.IconButton1.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue
-        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Trash
-        Me.IconButton1.IconColor = System.Drawing.Color.MidnightBlue
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.IconSize = 30
-        Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.IconButton1.Location = New System.Drawing.Point(294, 7)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(115, 39)
-        Me.IconButton1.TabIndex = 3
-        Me.IconButton1.Text = "Delete Item"
-        Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton1.UseVisualStyleBackColor = True
-        '
         'Panel5
         '
+        Me.Panel5.Controls.Add(Me.btnCancel)
+        Me.Panel5.Controls.Add(Me.txtRemarks)
+        Me.Panel5.Controls.Add(Me.txtItemDesc)
         Me.Panel5.Controls.Add(Me.btnAddItem)
         Me.Panel5.Controls.Add(Me.btnSave)
         Me.Panel5.Controls.Add(Me.ddUOM)
@@ -222,11 +209,9 @@ Partial Class FrmRFQ
         Me.Panel5.Controls.Add(Me.RadLabel14)
         Me.Panel5.Controls.Add(Me.RadGroupBox2)
         Me.Panel5.Controls.Add(Me.RadGroupBox1)
-        Me.Panel5.Controls.Add(Me.txtRemarks)
         Me.Panel5.Controls.Add(Me.dtDateNeeded)
         Me.Panel5.Controls.Add(Me.RadLabel13)
         Me.Panel5.Controls.Add(Me.seQty)
-        Me.Panel5.Controls.Add(Me.txtItemDesc)
         Me.Panel5.Controls.Add(Me.RadLabel12)
         Me.Panel5.Controls.Add(Me.RadLabel11)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Left
@@ -234,6 +219,41 @@ Partial Class FrmRFQ
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(703, 308)
         Me.Panel5.TabIndex = 3
+        '
+        'btnCancel
+        '
+        Me.btnCancel.BackColor = System.Drawing.Color.Silver
+        Me.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue
+        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancel.IconChar = FontAwesome.Sharp.IconChar.CircleXmark
+        Me.btnCancel.IconColor = System.Drawing.Color.MidnightBlue
+        Me.btnCancel.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnCancel.IconSize = 30
+        Me.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnCancel.Location = New System.Drawing.Point(471, 263)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(211, 39)
+        Me.btnCancel.TabIndex = 41
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnCancel.UseVisualStyleBackColor = False
+        Me.btnCancel.Visible = False
+        '
+        'txtRemarks
+        '
+        Me.txtRemarks.Location = New System.Drawing.Point(471, 11)
+        Me.txtRemarks.Name = "txtRemarks"
+        Me.txtRemarks.Size = New System.Drawing.Size(211, 109)
+        Me.txtRemarks.TabIndex = 40
+        Me.txtRemarks.ThemeName = "VisualStudio2022Light"
+        '
+        'txtItemDesc
+        '
+        Me.txtItemDesc.Location = New System.Drawing.Point(127, 39)
+        Me.txtItemDesc.Name = "txtItemDesc"
+        Me.txtItemDesc.Size = New System.Drawing.Size(211, 109)
+        Me.txtItemDesc.TabIndex = 39
+        Me.txtItemDesc.ThemeName = "VisualStudio2022Light"
         '
         'btnAddItem
         '
@@ -261,9 +281,9 @@ Partial Class FrmRFQ
         Me.btnSave.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnSave.IconSize = 30
         Me.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnSave.Location = New System.Drawing.Point(471, 263)
+        Me.btnSave.Location = New System.Drawing.Point(16, 263)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(211, 39)
+        Me.btnSave.Size = New System.Drawing.Size(444, 39)
         Me.btnSave.TabIndex = 2
         Me.btnSave.Text = "Save"
         Me.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -380,14 +400,6 @@ Partial Class FrmRFQ
         Me.rbChemYes.Text = "Yes"
         Me.rbChemYes.ThemeName = "VisualStudio2022Light"
         '
-        'txtRemarks
-        '
-        Me.txtRemarks.Location = New System.Drawing.Point(471, 11)
-        Me.txtRemarks.Name = "txtRemarks"
-        Me.txtRemarks.Size = New System.Drawing.Size(211, 109)
-        Me.txtRemarks.TabIndex = 30
-        Me.txtRemarks.ThemeName = "VisualStudio2022Light"
-        '
         'dtDateNeeded
         '
         Me.dtDateNeeded.CustomFormat = "MMMM dd, yyyy"
@@ -418,14 +430,6 @@ Partial Class FrmRFQ
         Me.seQty.Size = New System.Drawing.Size(211, 22)
         Me.seQty.TabIndex = 26
         Me.seQty.ThemeName = "VisualStudio2022Light"
-        '
-        'txtItemDesc
-        '
-        Me.txtItemDesc.Location = New System.Drawing.Point(127, 40)
-        Me.txtItemDesc.Name = "txtItemDesc"
-        Me.txtItemDesc.Size = New System.Drawing.Size(211, 108)
-        Me.txtItemDesc.TabIndex = 25
-        Me.txtItemDesc.ThemeName = "VisualStudio2022Light"
         '
         'RadLabel12
         '
@@ -507,7 +511,7 @@ Partial Class FrmRFQ
         Me.mcbApprovedBy.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.mcbApprovedBy.EditorControl.MasterTemplate.EnableGrouping = False
         Me.mcbApprovedBy.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.mcbApprovedBy.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition10
+        Me.mcbApprovedBy.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition2
         Me.mcbApprovedBy.EditorControl.Name = "NestedRadGridView"
         Me.mcbApprovedBy.EditorControl.ReadOnly = True
         Me.mcbApprovedBy.EditorControl.ShowGroupPanel = False
@@ -546,7 +550,7 @@ Partial Class FrmRFQ
         Me.mcbCheckedBy.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.mcbCheckedBy.EditorControl.MasterTemplate.EnableGrouping = False
         Me.mcbCheckedBy.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.mcbCheckedBy.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition11
+        Me.mcbCheckedBy.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition3
         Me.mcbCheckedBy.EditorControl.Name = "NestedRadGridView"
         Me.mcbCheckedBy.EditorControl.ReadOnly = True
         Me.mcbCheckedBy.EditorControl.ShowGroupPanel = False
@@ -704,11 +708,38 @@ Partial Class FrmRFQ
         '
         '
         Me.gvData.MasterTemplate.AllowAddNewRow = False
-        Me.gvData.MasterTemplate.ViewDefinition = TableViewDefinition12
+        Me.gvData.MasterTemplate.ViewDefinition = TableViewDefinition4
         Me.gvData.Name = "gvData"
         Me.gvData.Size = New System.Drawing.Size(1430, 388)
         Me.gvData.TabIndex = 2
         Me.gvData.ThemeName = "VisualStudio2022Light"
+        '
+        'Panel8
+        '
+        Me.Panel8.Controls.Add(Me.IconButton2)
+        Me.Panel8.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel8.Location = New System.Drawing.Point(0, 0)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(1430, 31)
+        Me.Panel8.TabIndex = 4
+        '
+        'IconButton2
+        '
+        Me.IconButton2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.IconButton2.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue
+        Me.IconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.Redo
+        Me.IconButton2.IconColor = System.Drawing.Color.MidnightBlue
+        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton2.IconSize = 24
+        Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.IconButton2.Location = New System.Drawing.Point(0, 0)
+        Me.IconButton2.Name = "IconButton2"
+        Me.IconButton2.Size = New System.Drawing.Size(115, 31)
+        Me.IconButton2.TabIndex = 4
+        Me.IconButton2.Text = "Refresh"
+        Me.IconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.IconButton2.UseVisualStyleBackColor = True
         '
         'Panel7
         '
@@ -723,13 +754,10 @@ Partial Class FrmRFQ
         Me.bwSave.WorkerReportsProgress = True
         Me.bwSave.WorkerSupportsCancellation = True
         '
-        'Panel8
+        'bwUpdate
         '
-        Me.Panel8.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel8.Location = New System.Drawing.Point(0, 0)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(1430, 31)
-        Me.Panel8.TabIndex = 4
+        Me.bwUpdate.WorkerReportsProgress = True
+        Me.bwUpdate.WorkerSupportsCancellation = True
         '
         'FrmRFQ
         '
@@ -751,6 +779,8 @@ Partial Class FrmRFQ
         CType(Me.pbItems, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
+        CType(Me.txtRemarks, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtItemDesc, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ddUOM, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ddExpenseType, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel16, System.ComponentModel.ISupportInitialize).EndInit()
@@ -766,11 +796,9 @@ Partial Class FrmRFQ
         Me.RadGroupBox1.PerformLayout()
         CType(Me.rbChemNo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.rbChemYes, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtRemarks, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtDateNeeded, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.seQty, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtItemDesc, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
@@ -801,6 +829,7 @@ Partial Class FrmRFQ
         Me.Panel2.ResumeLayout(False)
         CType(Me.gvData.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gvData, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel8.ResumeLayout(False)
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -831,7 +860,7 @@ Partial Class FrmRFQ
     Friend WithEvents mcbApprovedBy As Telerik.WinControls.UI.RadMultiColumnComboBox
     Friend WithEvents RadLabel7 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents mcbCheckedBy As Telerik.WinControls.UI.RadMultiColumnComboBox
-    Friend WithEvents txtItemDesc As Telerik.WinControls.UI.RadRichTextEditor
+    'Friend WithEvents txtItemDesc As Telerik.WinControls.UI.RadRichTextEditor
     Friend WithEvents RadLabel12 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel11 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel13 As Telerik.WinControls.UI.RadLabel
@@ -842,7 +871,7 @@ Partial Class FrmRFQ
     Friend WithEvents RadGroupBox1 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents rbChemNo As Telerik.WinControls.UI.RadRadioButton
     Friend WithEvents rbChemYes As Telerik.WinControls.UI.RadRadioButton
-    Friend WithEvents txtRemarks As Telerik.WinControls.UI.RadRichTextEditor
+    'Friend WithEvents txtRemarks As Telerik.WinControls.UI.RadRichTextEditor
     Friend WithEvents dtDateNeeded As Telerik.WinControls.UI.RadDateTimePicker
     Friend WithEvents gvItems As Telerik.WinControls.UI.RadGridView
     Friend WithEvents RadLabel16 As Telerik.WinControls.UI.RadLabel
@@ -855,9 +884,13 @@ Partial Class FrmRFQ
     Friend WithEvents ddUOM As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents Panel6 As Panel
     Friend WithEvents btnAddItem As FontAwesome.Sharp.IconButton
-    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents bwSave As System.ComponentModel.BackgroundWorker
     Friend WithEvents pbItems As Telerik.WinControls.UI.RadProgressBar
     Friend WithEvents Panel8 As Panel
+    Friend WithEvents txtItemDesc As Telerik.WinControls.UI.RadRichTextEditor
+    Friend WithEvents txtRemarks As Telerik.WinControls.UI.RadRichTextEditor
+    Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnCancel As FontAwesome.Sharp.IconButton
+    Friend WithEvents bwUpdate As System.ComponentModel.BackgroundWorker
 End Class
 

@@ -21,7 +21,7 @@ Public Class cGvRFQ
         gv.Columns.Add(fldStatus)
 
         Dim fldTypeOfExpense As New GridViewTextBoxColumn("TYPE OF EXPENSE")
-        fldTypeOfExpense.FieldName = "fldTypeOfExpense"
+        fldTypeOfExpense.FieldName = "fldTypeExpense"
         fldTypeOfExpense.ReadOnly = True
         fldTypeOfExpense.TextAlignment = ContentAlignment.MiddleCenter
         fldTypeOfExpense.Width = 150
@@ -29,7 +29,7 @@ Public Class cGvRFQ
         gv.Columns.Add(fldTypeOfExpense)
 
         Dim fldDescription As New GridViewTextBoxColumn("DESCRIPTION")
-        fldDescription.FieldName = "fldDescription"
+        fldDescription.FieldName = "fldDesc"
         fldDescription.ReadOnly = True
         fldDescription.TextAlignment = ContentAlignment.MiddleCenter
         fldDescription.Width = 300
@@ -37,7 +37,7 @@ Public Class cGvRFQ
         gv.Columns.Add(fldDescription)
 
         Dim fldQty As New GridViewTextBoxColumn("QTY")
-        fldQty.FieldName = "fldQty"
+        fldQty.FieldName = "fldQTY"
         fldQty.ReadOnly = True
         fldQty.TextAlignment = ContentAlignment.MiddleCenter
         fldQty.Width = 80
@@ -84,6 +84,18 @@ Public Class cGvRFQ
         fldPPE.Width = 120
         gv.Columns.Add(fldPPE)
 
+        Dim fldDelete As New GridViewCommandColumn("DELETE")
+        fldDelete.FieldName = "DELETE"
+        fldDelete.DefaultText = "DELETE"
+        fldDelete.TextAlignment = ContentAlignment.MiddleCenter
+        fldDelete.UseDefaultText = True
+        fldDelete.Width = 80
+        fldDelete.ReadOnly = True
+        fldDelete.IsPinned = True
+        fldDelete.PinPosition = PinnedColumnPosition.Left
+        gv.Columns.Add(fldDelete)
+        'AddHandler gv.CommandCellClick, AddressOf editUser
+
         'gv.ReadOnly = True
         gv.EnableAlternatingRowColor = True
         gv.EnableFiltering = True
@@ -100,12 +112,31 @@ Public Class cGvRFQ
     Public Sub readyGvRFQList(ByVal gv As Telerik.WinControls.UI.RadGridView)
 
         Dim fldRFQNo As New GridViewTextBoxColumn("RFQ NO.")
-        fldRFQNo.FieldName = "RFQNo"
+        fldRFQNo.FieldName = "fldRFQNo"
         fldRFQNo.ReadOnly = True
         fldRFQNo.TextAlignment = ContentAlignment.MiddleCenter
         fldRFQNo.Width = 150
-        fldRFQNo.IsVisible = True
+        fldRFQNo.IsVisible = False
         gv.Columns.Add(fldRFQNo)
+
+        Dim RFQNo As New GridViewTextBoxColumn("RFQ NO.")
+        RFQNo.FieldName = "RFQNo"
+        RFQNo.ReadOnly = True
+        RFQNo.TextAlignment = ContentAlignment.MiddleCenter
+        RFQNo.Width = 150
+        RFQNo.IsVisible = True
+        gv.Columns.Add(RFQNo)
+
+        ' Action Button
+        Dim GridAction As New GridViewTextBoxColumn()
+        GridAction.HeaderText = "ACTION"
+        GridAction.IsPinned = True
+        GridAction.PinPosition = PinnedColumnPosition.Left
+        GridAction.Width = 80
+        GridAction.Name = "ACTION"
+        GridAction.ReadOnly = True
+        GridAction.TextAlignment = ContentAlignment.MiddleCenter
+        gv.MasterTemplate.Columns.Add(GridAction)
 
         Dim fldDateRequest As New GridViewDateTimeColumn("DATE REQUEST")
         fldDateRequest.FieldName = "fldDateRequest"
